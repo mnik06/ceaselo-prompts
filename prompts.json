@@ -1,0 +1,6 @@
+{
+  "version": "v0.1.0",
+  "prompts": [
+    { "name": "system/echo", "file": "system/echo.md", "vars": ["text"] }
+  ]
+}

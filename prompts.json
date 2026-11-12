@@ -1,6 +1,199 @@
 {
-  "version": "v0.1.0",
+  "version": "v0.2.0",
   "prompts": [
-    { "name": "system/echo", "file": "system/echo.md", "vars": ["text"] }
+    {
+      "name": "system/echo",
+      "file": "system/echo.md",
+      "vars": [
+        "text"
+      ]
+    },
+    {
+      "name": "repo-distill",
+      "file": "repo/distill.md",
+      "vars": [
+        "preset",
+        "rejected"
+      ]
+    },
+    {
+      "name": "repo-boilerplate",
+      "file": "repo/boilerplate.md",
+      "vars": [
+        "preset",
+        "contract"
+      ]
+    },
+    {
+      "name": "ticket-plan",
+      "file": "ticket/plan.md",
+      "vars": [
+        "ticketKey",
+        "brief",
+        "round",
+        "grillDepth"
+      ]
+    },
+    {
+      "name": "ticket-build",
+      "file": "ticket/build.md",
+      "vars": [
+        "ticketKey",
+        "ticketTitle",
+        "summary",
+        "acs",
+        "repos",
+        "multiRepoNote",
+        "branch",
+        "bullets",
+        "parallelNote"
+      ]
+    },
+    {
+      "name": "ticket-verify",
+      "file": "ticket/verify.md",
+      "vars": [
+        "ticketKey",
+        "ticketTitle",
+        "summary",
+        "criteria",
+        "changes",
+        "diffBases",
+        "stackNote",
+        "browserNote"
+      ]
+    },
+    {
+      "name": "ticket-review",
+      "file": "ticket/review.md",
+      "vars": [
+        "ticketKey",
+        "ticketTitle",
+        "summary",
+        "criteria",
+        "changes",
+        "diffBases"
+      ]
+    },
+    {
+      "name": "pm/answer",
+      "file": "pm/answer.md",
+      "vars": [
+        "ticketKey",
+        "questions"
+      ]
+    },
+    {
+      "name": "pm/baseline",
+      "file": "pm/baseline.md",
+      "vars": [
+        "projectName",
+        "requirements",
+        "decisions",
+        "assumptions",
+        "note",
+        "rejected"
+      ]
+    },
+    {
+      "name": "pm/change-ticket",
+      "file": "pm/change-ticket.md",
+      "vars": [
+        "projectName",
+        "summary",
+        "requirements",
+        "rejected"
+      ]
+    },
+    {
+      "name": "pm/chat",
+      "file": "pm/chat.md",
+      "vars": [
+        "projectCard",
+        "notes",
+        "messages"
+      ]
+    },
+    {
+      "name": "pm/distill",
+      "file": "pm/distill.md",
+      "vars": [
+        "documents"
+      ]
+    },
+    {
+      "name": "pm/feedback-digest",
+      "file": "pm/feedback-digest.md",
+      "vars": [
+        "sourceLabel",
+        "text",
+        "linkedTicket",
+        "tickets"
+      ]
+    },
+    {
+      "name": "pm/feedback-reply",
+      "file": "pm/feedback-reply.md",
+      "vars": [
+        "projectName",
+        "sourceLabel",
+        "text"
+      ]
+    },
+    {
+      "name": "pm/proposal",
+      "file": "pm/proposal.md",
+      "vars": [
+        "epics",
+        "rejected"
+      ]
+    },
+    {
+      "name": "pm/prototype",
+      "file": "pm/prototype.md",
+      "vars": [
+        "projectName",
+        "baselineSections",
+        "decisions",
+        "requestedChange",
+        "rejected"
+      ]
+    },
+    {
+      "name": "pm/reference-description",
+      "file": "pm/reference-description.md",
+      "vars": [
+        "features",
+        "rejected"
+      ]
+    },
+    {
+      "name": "pm/rerank",
+      "file": "pm/rerank.md",
+      "vars": [
+        "tickets"
+      ]
+    },
+    {
+      "name": "pm/triage",
+      "file": "pm/triage.md",
+      "vars": [
+        "ask"
+      ]
+    },
+    {
+      "name": "pm/wbs",
+      "file": "pm/wbs.md",
+      "vars": [
+        "projectName",
+        "requirements",
+        "prototypeOutline",
+        "repos",
+        "presets",
+        "sprintLengthWeeks",
+        "billableCapacityHours",
+        "rejected"
+      ]
+    }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "version": "v0.2.0",
+  "version": "v0.3.0",
   "prompts": [
     {
       "name": "system/echo",
@@ -144,7 +144,7 @@
       "name": "pm/proposal",
       "file": "pm/proposal.md",
       "vars": [
-        "epics",
+        "scope",
         "rejected"
       ]
     },
@@ -188,11 +188,18 @@
         "projectName",
         "requirements",
         "prototypeOutline",
-        "repos",
         "presets",
         "sprintLengthWeeks",
         "billableCapacityHours",
         "rejected"
+      ]
+    },
+    {
+      "name": "pm/codebase-analysis",
+      "file": "pm/codebase-analysis.md",
+      "vars": [
+        "projectName",
+        "repo"
       ]
     }
   ]

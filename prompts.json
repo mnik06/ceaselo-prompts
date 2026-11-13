@@ -1,5 +1,5 @@
 {
-  "version": "v0.4.0",
+  "version": "v0.3.3",
   "prompts": [
     {
       "name": "system/echo",
@@ -60,10 +60,6 @@
         "branch",
         "bullets",
         "parallelNote",
-        "commitPrefix",
-        "planDesign",
-        "loopRules",
-        "selfReview",
         "projectInstructions"
       ]
     },
@@ -98,61 +94,11 @@
       ]
     },
     {
-      "name": "ticket-fix",
-      "file": "ticket/fix.md",
-      "vars": [
-        "ticketKey",
-        "ticketTitle",
-        "round",
-        "attempts",
-        "multiRepoNote",
-        "branch",
-        "acs",
-        "repos",
-        "brief",
-        "loopRules",
-        "projectInstructions"
-      ]
-    },
-    {
-      "name": "ticket-conflict",
-      "file": "ticket/conflict.md",
-      "vars": [
-        "ticketKey",
-        "ticketTitle",
-        "branch",
-        "repoName",
-        "baseBranch",
-        "files",
-        "ownAcs",
-        "others",
-        "repo",
-        "loopRules",
-        "projectInstructions"
-      ]
-    },
-    {
-      "name": "ticket-forward",
-      "file": "ticket/forward.md",
-      "vars": [
-        "from",
-        "to",
-        "repoName",
-        "loopRules",
-        "onFailure",
-        "waiting",
-        "repo",
-        "projectInstructions"
-      ]
-    },
-    {
       "name": "ticket-walkthrough",
       "file": "ticket/walkthrough.md",
       "vars": [
         "ticketKey",
-        "diffs",
-        "plan",
-        "deviations"
+        "diffs"
       ]
     },
     {
@@ -161,18 +107,6 @@
       "vars": [
         "ticketKey",
         "questions"
-      ]
-    },
-    {
-      "name": "pm/dispute",
-      "file": "pm/dispute.md",
-      "vars": [
-        "ticketKey",
-        "ticketTitle",
-        "kind",
-        "text",
-        "reason",
-        "acs"
       ]
     },
     {

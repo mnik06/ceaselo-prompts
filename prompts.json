@@ -294,6 +294,19 @@
         "projectName",
         "repo"
       ]
+    },
+    {
+      "name": "architect/stack-proposal",
+      "file": "architect/stack-proposal.md",
+      "vars": [
+        "projectName",
+        "requirements",
+        "decisions",
+        "presets",
+        "repos",
+        "feedback",
+        "rejected"
+      ]
     }
   ]
 }

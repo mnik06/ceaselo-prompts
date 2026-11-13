@@ -1,7 +1,7 @@
 Write the feature walkthrough of ticket {{ticketKey}} for the person who reviews it.
 
 Read the ticket's diff in each repository below. You are read-only: change nothing.
-{{diffs}}
+{{diffs}}{{plan}}{{deviations}}
 
 Then call walkthrough_submit once:
 - headline: one sentence on what the change does for its users, at most 120 characters.

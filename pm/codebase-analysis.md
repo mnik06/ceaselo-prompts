@@ -12,9 +12,9 @@ Write items of three types:
 - decision: a technical choice the code has already made (stack, architecture, data model, auth, hosting, conventions).
 - assumption: something the code suggests but does not prove.
 
-Every item cites the path it was read from. Describe behaviour in plain language; never paste code. A snippet is allowed only when it is the clearest evidence, at most 15 lines.
+Every item cites the path it was read from. Give each item the feature it belongs to as "feature": a kebab-case slug of at most 40 characters naming the user-facing capability ("order-checkout", "user-invitations"), one slug per capability reused across all its items; leave it out for cross-cutting and stack decisions. Describe behaviour in plain language; never paste code. A snippet is allowed only when it is the clearest evidence, at most 15 lines.
 
 Questions the code cannot answer (intent, who the users are, what is unfinished on purpose, what must not change) go under `questions`, at most 15, each with 2 to 4 options and the index of the one you recommend. Score how big and intricate this codebase is to take over as `effortScore`, 0 to 100 (tiny under 20, small under 45, medium under 75, large above).
 
 Answer with one JSON object only:
-{"effortScore": 0, "items": [{"type": "requirement", "title": "", "summary": "", "body": "", "path": "", "snippet": ""}], "questions": [{"topic": "", "question": "", "options": [{"label": "", "description": ""}], "recommended": 0}], "skippedPaths": []}
+{"effortScore": 0, "items": [{"type": "requirement", "feature": "", "title": "", "summary": "", "body": "", "path": "", "snippet": ""}], "questions": [{"topic": "", "question": "", "options": [{"label": "", "description": ""}], "recommended": 0}], "skippedPaths": []}

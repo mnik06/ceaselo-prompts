@@ -1,5 +1,5 @@
 {
-  "version": "v0.4.2",
+  "version": "v0.5.0",
   "prompts": [
     {
       "name": "system/echo",
@@ -176,15 +176,14 @@
       ]
     },
     {
-      "name": "pm/baseline",
-      "file": "pm/baseline.md",
+      "name": "pm/spec",
+      "file": "pm/spec.md",
       "vars": [
         "projectName",
+        "product",
+        "features",
         "requirements",
-        "decisions",
-        "assumptions",
-        "note",
-        "rejected"
+        "note"
       ]
     },
     {
@@ -194,6 +193,8 @@
         "projectName",
         "summary",
         "requirements",
+        "ticketRules",
+        "acLibrary",
         "rejected"
       ]
     },
@@ -245,9 +246,14 @@
       "file": "pm/prototype.md",
       "vars": [
         "projectName",
-        "baselineSections",
+        "specSections",
+        "spec",
+        "roles",
+        "scope",
         "decisions",
         "requestedChange",
+        "featureSlugs",
+        "roleSlugs",
         "rejected"
       ]
     },
@@ -278,12 +284,15 @@
       "file": "pm/wbs.md",
       "vars": [
         "projectName",
+        "features",
         "requirements",
-        "prototypeOutline",
+        "screens",
         "presets",
         "note",
         "sprintLengthWeeks",
         "billableCapacityHours",
+        "ticketRules",
+        "acLibrary",
         "rejected"
       ]
     },
@@ -293,6 +302,69 @@
       "vars": [
         "projectName",
         "repo"
+      ]
+    },
+    {
+      "name": "pm/wbs-detail",
+      "file": "pm/wbs-detail.md",
+      "vars": [
+        "projectName",
+        "tickets",
+        "otherTickets",
+        "requirements",
+        "screens",
+        "note",
+        "ticketRules",
+        "acLibrary",
+        "rejected"
+      ]
+    },
+    {
+      "name": "pm/ac-library",
+      "file": "pm/ac-library.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ticket-rules",
+      "file": "pm/ticket-rules.md",
+      "vars": []
+    },
+    {
+      "name": "pm/spec-outline",
+      "file": "pm/spec-outline.md",
+      "vars": [
+        "projectName",
+        "note",
+        "messages",
+        "sections",
+        "kbIndex",
+        "knownFeatures"
+      ]
+    },
+    {
+      "name": "pm/spec-extract",
+      "file": "pm/spec-extract.md",
+      "vars": [
+        "projectName",
+        "mode",
+        "outline",
+        "features",
+        "sources",
+        "kbIndex",
+        "existingItems",
+        "note"
+      ]
+    },
+    {
+      "name": "pm/spec-consolidate",
+      "file": "pm/spec-consolidate.md",
+      "vars": [
+        "projectName",
+        "outline",
+        "candidates",
+        "kbIndex",
+        "sourceTitles",
+        "note"
       ]
     },
     {

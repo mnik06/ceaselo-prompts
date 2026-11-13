@@ -1,5 +1,5 @@
 {
-  "version": "v0.3.0",
+  "version": "v0.3.1",
   "prompts": [
     {
       "name": "system/echo",
@@ -13,6 +13,7 @@
       "file": "repo/distill.md",
       "vars": [
         "preset",
+        "repository",
         "rejected"
       ]
     },

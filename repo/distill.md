@@ -1,5 +1,5 @@
-Distill the repository preset below into a command contract that machines run without reading prose.
-Preset: {{preset}}
+Distill the repository preset below, and for a repository that already has code its own files, into a command contract that machines run without reading prose.
+Preset: {{preset}}{{repository}}
 
 Answer with exactly one JSON object of this shape and nothing else:
 {
@@ -14,4 +14,4 @@ Answer with exactly one JSON object of this shape and nothing else:
   "ports": { "block": number, "env": { [ENV_NAME: string]: number } }       // env name -> offset inside the block
 }
 
-Rules: every command runs with `sh -c` at the root of the repository; nothing is assumed about the package manager or the database, so every tool a command needs is named by the command itself. Dependencies are installed against one shared store: use `$CEASELO_PACKAGE_STORE` where the tool takes a store or cache directory. A stack gets its database name in `$CEASELO_DB_NAME` and its ports as the env variables listed in `ports.env`; `readyUrl` may use `{NAME}` for one of those ports. Use null for what the preset does not define.{{rejected}}
+Rules: every command runs with `sh -c` at the root of the repository; nothing is assumed about the package manager or the database, so every tool a command needs is named by the command itself. Dependencies are installed against one shared store: use `$CEASELO_PACKAGE_STORE` where the tool takes a store or cache directory. A stack gets its database name in `$CEASELO_DB_NAME` and its ports as the env variables listed in `ports.env`; `readyUrl` may use `{NAME}` for one of those ports. Use null for what neither the repository nor the preset defines.{{rejected}}

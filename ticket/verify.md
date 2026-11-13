@@ -11,10 +11,13 @@ What the build changed:
 {{changes}}
 Compare with the base branch to see the diff: {{diffBases}}.
 
+Repositories:
+{{repos}}
+
 {{stackNote}}{{browserNote}}
 
 For each criterion call ac_report with status:
 - met: you saw it hold, with the evidence ids you attached (note says how you checked);
 - failed: it does not hold (note says what you saw);
 - disputed: it cannot be satisfied or checked as written (note says why: a reason is required).
-Stop when every criterion is reported. A criterion left unreported fails the verification.
+Stop when every criterion is reported. A criterion left unreported fails the verification.{{projectInstructions}}

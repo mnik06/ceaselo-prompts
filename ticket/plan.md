@@ -18,4 +18,4 @@ Then call plan_submit:
 - bullets, in build order: each a title, a body the builder follows without re-reading the brief, its repoId, the files it touches and the acceptance criteria it delivers. Every criterion is claimed by exactly one bullet and every bullet claims at least one. A tiny ticket is one bullet, a small one at most two. Bullets that touch disjoint files may share a parallelGroup and run at the same time.
 - acKinds: every criterion's id mapped to ui (seen in the browser), api (seen through the running app's API) or code (seen in the diff).
 - expectedChangedLines: the lines you expect the bullets to change in all.
-An invalid plan is answered with the reason: fix it and submit again. Stop once plan_submit is accepted.
+An invalid plan is answered with the reason: fix it and submit again. Stop once plan_submit is accepted.{{projectInstructions}}

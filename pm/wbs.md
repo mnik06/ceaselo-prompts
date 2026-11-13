@@ -6,7 +6,7 @@ Requirements (key: title):
 Prototype screens:
 {{prototypeOutline}}
 
-{{presets}}
+{{presets}}{{note}}
 
 Sprints are {{sprintLengthWeeks}} weeks with {{billableCapacityHours}} billable hours each; size the plan so it fills whole sprints.
 

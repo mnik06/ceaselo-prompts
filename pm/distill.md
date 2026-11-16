@@ -9,3 +9,7 @@ Rules, all checked by machine:
 - title: at most 80 characters. summary: ONE sentence, at most 200 characters, saying what the section contains, not what it is called.
 
 Answer with one JSON object and nothing else: {"documents":[{"index":<document index>,"sections":[{"startLine":1,"title":"...","summary":"..."}]}]}
+
+## Progress
+
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: once, after reading the material (50, "material read"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.

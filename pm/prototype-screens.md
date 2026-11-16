@@ -35,3 +35,7 @@ Requirements these screens show (read any other with kb_get):
 - Behaviour a screen needs (filtering a list, re-rendering after a create) goes in one inline <script> per screen that registers `window.__prototype.onShow(function (view) { … })`; view has route, state, role and params. Read data from `window.APP_DATA`. No routing, no hashchange handler, no <style>, no style attribute setting colour, font or shadow, no colour literal.
 - Show each role what the spec says it sees (data-only-roles, data-hide-roles).
 - Answer with one JSON object only, no prose: {"screens": [{"route": "<route>", "html": "…"}], "flags": []}. Write exactly the routes above, each once. Put in "flags" any part of your brief that asks for a new field, rule, role or flow the spec does not have, instead of building it.{{rejected}}
+
+## Progress
+
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after reading what these screens show (20, "requirements read"), when half of your screens are written (55, "n of m screens"), when all are written (90, "screens written"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.

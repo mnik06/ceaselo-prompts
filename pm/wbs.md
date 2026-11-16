@@ -45,3 +45,7 @@ The approved prototype: each screen's route, name, summary, and the features, ro
 The answer is refused, with the reasons, when a listed requirement is in no ticket's `reqKeys`, a `reqKeys` entry or a screen is unknown, a dependency is missing or circular, a foundation ticket depends on a non-foundation one, a HITL ticket has no dependent, or (12 tickets or fewer) a dev ticket lacks a description heading, its `reqKeys`, or at least 3 criteria when its effortScore is 20 or more.
 
 Answer with one JSON object `{"tickets":[{ref,title,type,feature,reqKeys,screens,foundation,dependsOn,effortScore,estimateHours,tags,hitl?,description?,ac?}]}` and nothing else.{{rejected}}
+
+## Progress
+
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after reading the features, requirements and screens (20, "scope read"), after cutting the tickets (50, "tickets cut"), after the graph and estimates (80, "estimated"), after checking coverage (95, "coverage checked"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.

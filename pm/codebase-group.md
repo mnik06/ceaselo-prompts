@@ -27,3 +27,7 @@ What the code suggests but does not prove is an assumption citing a path. Questi
 
 Answer with one JSON object only:
 {"requirements": [{"feature": "", "title": "", "summary": "", "body": "### Actors and permissions\n...", "path": ""}], "assumptions": [{"feature": "", "title": "", "body": "", "path": ""}], "questions": [{"topic": "", "question": "", "options": [{"label": "", "description": ""}], "recommended": 0, "feature": "", "impact": 3, "stakes": "high", "answerer": "team"}], "skippedPaths": []}
+
+## Progress
+
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after reading your features' code (40, "code read"), when half of the requirements are written (70), when all are written (95, "requirements written"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.

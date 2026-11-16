@@ -20,3 +20,7 @@ Read the requirements, decisions and screens this change touches in full with kb
 - `reqKeys` lists the keys of the requirements this change modifies or delivers, only keys listed above; empty when none applies.
 
 Answer with one JSON object `{"title":"<at most 100 characters>","description":"<markdown with the eight headings>","reqKeys":["REQ-n"],"ac":["..."]}` and nothing else.{{rejected}}
+
+## Progress
+
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after reading what the change touches (35, "context read"), after writing the description (70, "description written"), after the acceptance criteria (95, "criteria written"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.

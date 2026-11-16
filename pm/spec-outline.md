@@ -47,3 +47,7 @@ You see summaries only: the new client messages verbatim, the title and summary 
 
 Answer with one JSON object and nothing else:
 {"product":{"purpose":"","users":"","problems":"","successMeasures":"","constraints":"","businessModel":"","coreLoop":"","comparables":"","technical":"","risks":""},"roles":[{"slug":"","name":"","summary":""}],"features":[{"slug":"","name":"","summary":"","sections":["S1"],"messages":["M1"],"alreadyBuilt":false}],"areas":[{"area":"data","sections":[],"messages":[]}],"suggested":[{"slug":"","name":"","summary":"","why":""}],"contradictions":[{"text":"","sources":["S1","M2"]}],"missing":[""],"engagement":"","effortScore":0}
+
+## Progress
+
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after reading every source (`percent` 30, "material read"), after listing the features and roles (60, "features outlined"), after the product analysis (90, "analysis written"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.

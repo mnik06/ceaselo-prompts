@@ -39,3 +39,7 @@ What the review found (route, state, viewport, kind, severity, element, note):
 - Link to every route the entry lists in "links", with href="#/<route>"; link only to planned routes.
 - No routing, no hashchange handler, no <style>, no style attribute setting colour, font or shadow, no colour literal, no gradient, no emoji in controls or headings.
 - Answer with one JSON object only, no prose: {"screens": [{"route": "<route>", "html": "…"}], "flags": []}. Write exactly the routes above, each once.
+
+## Progress
+
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after reading the findings (25, "findings read"), when half of the screens are fixed (60, "n of m screens"), when all are fixed (90, "screens fixed"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.

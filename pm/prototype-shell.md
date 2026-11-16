@@ -50,3 +50,7 @@ One JSON object only, no prose:
 - Write "screens" only when the plan has 12 screens or fewer: then write every planned screen there, and no later session runs. Above 12, leave "screens" out.
 - A screen's "html" is its content only: one element data-state="<state>" per listed state, holding that state's full rendering (default first). Never write data-screen, the coverage attributes, a <style>, a control bar or routing code: code adds them.
 - At most 200 screens: a variation that differs only by state or role is a state or role, not a screen.{{rejected}}
+
+## Progress
+
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after reading the requirements (25, "requirements read"), after planning the screens (55, "screens planned"), after writing the shell (90, "shell written"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.

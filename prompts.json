@@ -1,5 +1,6 @@
 {
-  "version": "v0.5.0",
+  "version": "v0.9.0",
+  "kitVersion": "1.1.0",
   "prompts": [
     {
       "name": "system/echo",
@@ -242,22 +243,6 @@
       ]
     },
     {
-      "name": "pm/prototype",
-      "file": "pm/prototype.md",
-      "vars": [
-        "projectName",
-        "specSections",
-        "spec",
-        "roles",
-        "scope",
-        "decisions",
-        "requestedChange",
-        "featureSlugs",
-        "roleSlugs",
-        "rejected"
-      ]
-    },
-    {
       "name": "pm/reference-description",
       "file": "pm/reference-description.md",
       "vars": [
@@ -302,6 +287,25 @@
       "vars": [
         "projectName",
         "repo"
+      ]
+    },
+    {
+      "name": "pm/codebase-group",
+      "file": "pm/codebase-group.md",
+      "vars": [
+        "projectName",
+        "repo",
+        "outline",
+        "features"
+      ]
+    },
+    {
+      "name": "pm/codebase-consolidate",
+      "file": "pm/codebase-consolidate.md",
+      "vars": [
+        "projectName",
+        "repos",
+        "index"
       ]
     },
     {
@@ -377,6 +381,119 @@
         "presets",
         "repos",
         "feedback",
+        "rejected"
+      ]
+    },
+    {
+      "name": "pm/prototype-shell",
+      "file": "pm/prototype-shell.md",
+      "vars": [
+        "kitCatalogue",
+        "designRules",
+        "fidelityRules",
+        "projectName",
+        "specSections",
+        "spec",
+        "roles",
+        "scope",
+        "decisions",
+        "design",
+        "brand",
+        "base",
+        "ask",
+        "featureSlugs",
+        "roleSlugs",
+        "rejected"
+      ]
+    },
+    {
+      "name": "pm/prototype-screens",
+      "file": "pm/prototype-screens.md",
+      "vars": [
+        "kitCatalogue",
+        "designRules",
+        "fidelityRules",
+        "projectName",
+        "brief",
+        "shell",
+        "data",
+        "plan",
+        "routes",
+        "requirements",
+        "rejected"
+      ]
+    },
+    {
+      "name": "pm/prototype-kit",
+      "file": "pm/prototype-kit.md",
+      "vars": []
+    },
+    {
+      "name": "pm/design-rules",
+      "file": "pm/design-rules.md",
+      "vars": []
+    },
+    {
+      "name": "pm/prototype-fidelity-low",
+      "file": "pm/prototype-fidelity-low.md",
+      "vars": []
+    },
+    {
+      "name": "pm/prototype-fidelity-mid",
+      "file": "pm/prototype-fidelity-mid.md",
+      "vars": []
+    },
+    {
+      "name": "pm/prototype-fidelity-high",
+      "file": "pm/prototype-fidelity-high.md",
+      "vars": []
+    },
+    {
+      "name": "pm/prototype-critique",
+      "file": "pm/prototype-critique.md",
+      "vars": [
+        "designRules",
+        "fidelityRules",
+        "projectName",
+        "brief",
+        "plan",
+        "sheets",
+        "findings"
+      ]
+    },
+    {
+      "name": "pm/prototype-fix",
+      "file": "pm/prototype-fix.md",
+      "vars": [
+        "kitCatalogue",
+        "designRules",
+        "fidelityRules",
+        "brief",
+        "shell",
+        "data",
+        "plan",
+        "routes",
+        "screens",
+        "findings"
+      ]
+    },
+    {
+      "name": "pm/prototype-revise",
+      "file": "pm/prototype-revise.md",
+      "vars": [
+        "kitCatalogue",
+        "designRules",
+        "fidelityRules",
+        "projectName",
+        "brief",
+        "shell",
+        "data",
+        "plan",
+        "part",
+        "target",
+        "notes",
+        "requirements",
+        "answer",
         "rejected"
       ]
     }

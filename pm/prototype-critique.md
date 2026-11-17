@@ -44,4 +44,4 @@ An empty list is a valid answer when nothing is worth changing.
 
 ## Progress
 
-People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after looking at every screen (50, "screens reviewed"), after writing the findings (90, "findings written"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: right after looking at every screen (35, "screens reviewed"), once the findings are decided (50, "findings decided"), and last, the moment you start writing your final answer (60, "writing the answer"). Report each milestone the moment you reach it, never several at once later; never call it once your answer has begun, never more often, never with 100 (the end of the task says that), and skip it if the tool is not listed.

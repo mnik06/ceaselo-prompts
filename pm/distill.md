@@ -12,4 +12,4 @@ Answer with one JSON object and nothing else: {"documents":[{"index":<document i
 
 ## Progress
 
-People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: once, after reading the material (50, "material read"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: right after reading the material (40, "material read"), and last, the moment you start writing your final answer (60, "writing the answer"). Report each milestone the moment you reach it, never several at once later; never call it once your answer has begun, never more often, never with 100 (the end of the task says that), and skip it if the tool is not listed.

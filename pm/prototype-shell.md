@@ -53,4 +53,4 @@ One JSON object only, no prose:
 
 ## Progress
 
-People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after reading the requirements (25, "requirements read"), after planning the screens (55, "screens planned"), after writing the shell (90, "shell written"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: right after your reads, before you plan anything (20, "requirements read"), once the design brief and the screen plan are decided (45, "screens planned"), and last, the moment you start writing your final answer (60, "writing the answer"). Report each milestone the moment you reach it, never several at once later; never call it once your answer has begun, never more often, never with 100 (the end of the task says that), and skip it if the tool is not listed.

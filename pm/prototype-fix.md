@@ -42,4 +42,4 @@ What the review found (route, state, viewport, kind, severity, element, note):
 
 ## Progress
 
-People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after reading the findings (25, "findings read"), when half of the screens are fixed (60, "n of m screens"), when all are fixed (90, "screens fixed"). Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: right after reading the findings (25, "findings read"), once every fix is decided (45, "fixes planned"), and last, the moment you start writing your final answer (60, "writing the answer"). Report each milestone the moment you reach it, never several at once later; never call it once your answer has begun, never more often, never with 100 (the end of the task says that), and skip it if the tool is not listed.

@@ -41,4 +41,4 @@ Answer with one JSON object and nothing else:
 
 ## Progress
 
-People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after the first pass (25), after the second (50), after the third (75), after the fourth (95), each with the pass's name as the note. Never call it more often, never report 100 (the end of the task says that), and skip it if the tool is not listed.
+People watch this task's card and Kip's pill. Call `progress_report` with `percent` and a short `note` (at most 80 characters, plain words) at these milestones only, then carry on without waiting: after the first pass (15), after the second (30), after the third (45), after the fourth (55), each with the pass's name as the note, and last, the moment you start writing your final answer (60, "writing the answer"). Report each milestone the moment you reach it, never several at once later; never call it once your answer has begun, never more often, never with 100 (the end of the task says that), and skip it if the tool is not listed.

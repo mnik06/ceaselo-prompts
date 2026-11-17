@@ -10,17 +10,21 @@ The repository was outlined already; its features are read in parallel groups. W
 
 Read each feature's code in full, starting from its paths: routes and handlers, screens, validation, the states it moves records through, its errors, empty states and limits. List any path you did not get to under `skippedPaths` instead of guessing what it does. Use kb_search first: never repeat a requirement the knowledge base already holds.
 
-One requirement per capability, in full, on this template: the body has exactly these headings, each as "### <Heading>", in this order, every one present; write "None stated." under a heading the code says nothing about. A requirement missing one is dropped.
+## How the Project Spec reads
+
+These items are rendered as the Project Spec a client signs. Write every title, summary and body as a product spec, never as analysis or conversation:
+- Third person, present tense, about the product: "The app shows today's tasks", never "you", "the client", "your", "we", "Kip" or "the material says".
+- Facts only, as the code shows them. Leave an unknown out of the body: it is an assumption or a question.
+- No ids, file paths or source refs in titles, summaries or bodies: the path goes in "path".
+- Product behaviour only: what a person can do, sees and is told. No data types, field lists, schemas, endpoints, frameworks or performance figures unless the sources demand one.
+- Lean: a requirement is complete when a designer and a tester can work from it without guessing. Never pad; never repeat the summary in the body.
+
+One requirement per capability, in full, on this template: the body has exactly these headings, each as "### <Heading>", in this order, every one present; write "None." under a heading the code says nothing about. Behaviour is numbered steps, Acceptance criteria short checks a tester can verify; product behaviour only, never types, fields or file paths in the body (the path goes in "path"); third person, about the product. A requirement missing one is dropped.
   ### Actors and permissions
-  ### Main flow
-  ### Alternate flows
-  ### States and transitions
-  ### Validation and errors
+  ### Behaviour
+  ### Rules and errors
   ### Edge cases
-  ### Empty states
-  ### Data
-  ### Non-functional
-  ### Open points
+  ### Acceptance criteria
 Each carries "feature" (a slug of your group) and the "path" it was read from. Describe behaviour in plain language; never paste code. A snippet is allowed only when it is the clearest evidence, at most 15 lines.
 
 What the code suggests but does not prove is an assumption citing a path. Questions the code cannot answer, at most 5, each with 2 to 4 options, the index of the one you recommend, its feature slug, "impact" 1 to 5 (how much of the product, estimate or data model the answer moves), "stakes" ("high" when load-bearing or hard to reverse: data model, money, permissions and privacy, scope, integrations, legal; "low" when reversible: UI details, copy, defaults, ordering, formats; low-stakes team questions become Kip's calls on your recommendation), and "answerer": "team" or "client" (a client question also carries "group" ("blocks_estimate" or "before_kickoff") and "defaultAnswer").

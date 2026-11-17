@@ -24,19 +24,23 @@ Items under "model", each with "kind", the feature slug or area it belongs to (o
 - notification: trigger, recipients, channel, content.
 - integration: the external system, direction, data exchanged, and what the code does when it is down or answers garbage.
 
+## How the Project Spec reads
+
+These items are rendered as the Project Spec a client signs. Write every title, summary and body as a product spec, never as analysis or conversation:
+- Third person, present tense, about the product: "The app shows today's tasks", never "you", "the client", "your", "we", "Kip" or "the material says".
+- Facts only, as the code shows them. Leave an unknown out of the body: it is an assumption or a question.
+- No ids, file paths or source refs in titles, summaries or bodies: the path goes in "path".
+- Product behaviour only: what a person can do, sees and is told. No data types, field lists, schemas, endpoints, frameworks or performance figures unless the sources demand one.
+- Lean: a requirement is complete when a designer and a tester can work from it without guessing. Never pad; never repeat the summary in the body.
+
 ## Requirements
 
-One per capability, in full, on this template: the body has exactly these headings, each as "### <Heading>", in this order, every one present; write "None stated." under a heading the code says nothing about. A requirement missing one is dropped.
+One per capability, in full, on this template: the body has exactly these headings, each as "### <Heading>", in this order, every one present; write "None." under a heading the code says nothing about. Behaviour is numbered steps, Acceptance criteria short checks a tester can verify; product behaviour only, never types, fields or file paths in the body (the path goes in "path"); third person, about the product. A requirement missing one is dropped.
   ### Actors and permissions
-  ### Main flow
-  ### Alternate flows
-  ### States and transitions
-  ### Validation and errors
+  ### Behaviour
+  ### Rules and errors
   ### Edge cases
-  ### Empty states
-  ### Data
-  ### Non-functional
-  ### Open points
+  ### Acceptance criteria
 Each carries exactly one of "feature" (a slug of your outline) or "area" (roles, data, nfr, integrations, notifications), and the "path" it was read from. Describe behaviour in plain language; never paste code. A snippet is allowed only when it is the clearest evidence, at most 15 lines.
 
 ## Decisions, assumptions and questions

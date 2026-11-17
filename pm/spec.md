@@ -9,7 +9,11 @@ You are the Project Manager agent of "{{projectName}}". The Project Spec is rend
 ## Requirements (key: title)
 {{requirements}}
 {{note}}
-**Overview**: markdown, at most 4,000 characters, for the client to read first. Say what the product is and for whom, the problems it solves, how it makes or saves money, how success will be measured, and the constraints it is built under; then its core loop (the flow the MVP is built around), what users of comparable products will expect and how the MVP meets it, the main technical cost drivers, and, in a few sentences, what the MVP delivers and what waits for later. Risks are listed in their own section: do not repeat them. Plain language, no requirement keys, no headings above level 3. Use only what the material above states: where it is silent, leave it out rather than invent. What the analysis marks as domain knowledge stays framed as the industry's norm, never as the client's words. Read an item with kb_get when a title is not enough.
+**Overview**: markdown, at most 2,500 characters, the opening of a product spec. Exactly these level-3 headings, each a short paragraph: "What it is" (the product and its users), "Problems it solves", "Core loop" (the flow the MVP is built around), "Constraints" (platforms, the quality bar, what must hold). Describe the product, never the material or the people behind it:
+- Third person, present tense: "Planner is an iPhone app that…", "Its users…". Never "you", "your", "the client", "we", "Kip", "the material", "not stated" or "it does not say".
+- State what is decided; leave unknowns out (they are open questions elsewhere). Never speculate about money, comparables or cost drivers.
+- No requirement keys, no ids, no lists of features (the scope table follows), no risks.
+Read an item with kb_get when a title is not enough.
 
 **Glossary**: the domain terms the requirements actually use that a newcomer to this client's business would not know, each defined in one sentence as this product uses it. At most 40; none when there are none. No generic software terms.
 

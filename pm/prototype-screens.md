@@ -34,7 +34,7 @@ Requirements these screens show (read any other with kb_get):
 - Forms show their validation: required fields, formats and limits from the spec, field-level errors with real copy (aria-invalid and .field__error).
 - Behaviour a screen needs (filtering a list, re-rendering after a create) goes in one inline <script> per screen that registers `window.__prototype.onShow(function (view) { … })`; view has route, state, role and params. Read data from `window.APP_DATA`. No routing, no hashchange handler, no <style>, no style attribute setting colour, font or shadow, no colour literal.
 - Show each role what the spec says it sees (data-only-roles, data-hide-roles).
-- Answer with one JSON object only, no prose: {"screens": [{"route": "<route>", "html": "…"}], "flags": []}. Write exactly the routes above, each once. Put in "flags" any part of your brief that asks for a new field, rule, role or flow the spec does not have, instead of building it.{{rejected}}
+- Answer with one JSON object only, no prose: {"screens": [{"route": "<route>", "html": "…"}], "flags": []}. Write exactly the routes above, each once, each "html" at most 100,000 characters. Put in "flags" (at most 20, each at most 500 characters) any part of your brief that asks for a new field, rule, role or flow the spec does not have, instead of building it.{{rejected}}
 
 ## Progress
 

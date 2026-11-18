@@ -1,5 +1,5 @@
 {
-  "version": "v0.16.0",
+  "version": "v0.17.0",
   "kitVersion": "1.1.1",
   "prompts": [
     {
@@ -392,6 +392,15 @@
         "repos",
         "feedback",
         "rejected"
+      ]
+    },
+    {
+      "name": "pm/prototype-styles",
+      "file": "pm/prototype-styles.md",
+      "vars": [
+        "projectName",
+        "overview",
+        "product"
       ]
     },
     {

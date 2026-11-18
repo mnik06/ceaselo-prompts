@@ -38,7 +38,7 @@ What the review found (route, state, viewport, kind, severity, element, note):
 - Write each screen's content only: one element data-state="<state>" per state its plan entry lists, holding that state's full rendering. Code wraps it with its route and coverage attributes.
 - Link to every route the entry lists in "links", with href="#/<route>"; link only to planned routes.
 - No routing, no hashchange handler, no <style>, no style attribute setting colour, font or shadow, no colour literal, no gradient, no emoji in controls or headings.
-- Answer with one JSON object only, no prose: {"screens": [{"route": "<route>", "html": "…"}], "flags": []}. Write exactly the routes above, each once.
+- Answer with one JSON object only, no prose: {"screens": [{"route": "<route>", "html": "…"}], "flags": []}. Write exactly the routes above, each once, each "html" at most 100,000 characters; "flags" holds at most 20 lines of at most 500 characters.
 
 ## Progress
 

@@ -31,7 +31,7 @@ Exact slugs and keys the machine check holds you to:
 
 1. Read the requirements; read the full body of any requirement listed by title only (kb_get).
 2. Decide the design brief: mood (calm, dense, playful or bold), density (compact, comfortable or spacious), token overrides (accent as #rrggbb, neutral: slate, gray, zinc or stone; radius: sharp, soft or round), the product's voice, and a rationale that names the reference products you were given, if any. Brand inputs above are fixed: keep them.
-3. Plan every screen: for each MVP feature, the screens its flows need (list, detail, create, edit, settings, confirmation, first-run), which roles use each one, which REQ keys it shows, its states (always "default", plus empty, loading, error and any state the spec names), whether it is a mobile screen, the routes it links to, and its group (the feature or flow it belongs to; one later session writes one group). A role that may not do something sees it disabled, hidden (data-hide-roles) or refused, as the spec says.
+3. Plan every screen: for each MVP feature, the screens its flows need (list, detail, create, edit, settings, confirmation, first-run), which roles use each one, which REQ keys it shows, its states (always "default" first, plus only the states this screen really shows: empty, loading or error where they can happen, and a state the spec names for it; most screens need 2 to 5, never more than 12), whether it is a mobile screen, the routes it links to, and its group (the feature or flow it belongs to; one later session writes one group). A role that may not do something sees it disabled, hidden (data-hide-roles) or refused, as the spec says.
 4. Write the app shell: the persistent frame every screen sits in (navigation reaching every top-level screen, header with the product name in an element with data-slot="logo", user menu), with exactly one element data-slot="screens" where code puts the screens. Use kit classes and icons only.
 5. Write the sample data: one JavaScript script defining `window.APP_DATA` with realistic records for the domain (plausible names, dates, amounts, statuses; at least one 120-character value; 25+ rows where the spec expects volume). Screens read it.
 6. Check everything against the rules before you answer.
@@ -47,9 +47,13 @@ One JSON object only, no prose:
  "screens": [{"route": "orders", "html": "<div data-state=\"default\">…</div><div data-state=\"empty\">…</div>…"}]}
 
 - Routes are kebab-case without "#/" ("orders", "orders/detail"); links name planned routes only; a detail screen may read an id after the route (#/orders/detail?id=3) through `window.__prototype.params()`.
-- Write "screens" only when the plan has 12 screens or fewer: then write every planned screen there, and no later session runs. Above 12, leave "screens" out.
+- Write "screens" only when the plan has 4 screens or fewer: then write every planned screen there, and no later session runs. Above 4, leave "screens" out: parallel sessions write them faster.
 - A screen's "html" is its content only: one element data-state="<state>" per listed state, holding that state's full rendering (default first). Never write data-screen, the coverage attributes, a <style>, a control bar or routing code: code adds them.
-- At most 200 screens: a variation that differs only by state or role is a state or role, not a screen.{{rejected}}
+- At most 200 screens: a variation that differs only by state or role is a state or role, not a screen.
+- Hard limits; an answer over any of them is refused whole and written again:
+  - each plan entry: route at most 120 characters; title and summary 1 to 200 characters; at most 20 features, 20 roles, 60 REQ keys and 60 links; 1 to 12 states, each kebab-case; group at most 60 characters.
+  - brief: voice at most 600 characters, rationale at most 1,500.
+  - shell at most 200,000 characters; data at most 400,000; each screen's "html" at most 100,000.{{rejected}}
 
 ## Progress
 

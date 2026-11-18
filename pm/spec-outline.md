@@ -5,6 +5,8 @@ You see summaries only: the new client messages verbatim, the title and summary 
 ## New client messages (M<n>)
 {{messages}}
 
+A message marked "the member's note about the attached material: how to read it" is the member's own words sent with their files: it frames the material (which parts are reference, such as a whole-product spec or work already delivered, and which parts are asked for now). Read the material through it; it is not a requirement source, so never cite it for a requirement.
+
 ## Document sections (S<n>: title — summary)
 {{sections}}
 
@@ -29,7 +31,12 @@ You see summaries only: the new client messages verbatim, the title and summary 
    - risks: business, technical, legal and adoption risks, ranked most severe first, each on its own line as "<n>. <risk>: <one-line mitigation>".
    Each field at most 1,500 characters, all ten together under 7,000. purpose, users, problems, successMeasures and constraints state what the material says; where it is silent write "Not stated." rather than inventing. businessModel, coreLoop, comparables, technical and risks are your analysis: ground them in the material, and never present your domain knowledge as something the client said.
 2. **Roles.** Every role the product distinguishes, including the client's own staff, admins, guests and anyone who only receives something (an email recipient, a viewer of a shared link). Slug kebab-case, a name, one line on what they do.
-3. **Features.** One per user-facing capability, named the way the client would name it: not one per screen, not one per CRUD verb ("Manage orders", not "Create order" + "Edit order" + "Delete order"), not so broad that one feature is half the product. A 500-page specification typically has 15 to 60 features; a short brief 3 to 15. For each: a kebab-case slug of at most 40 characters, a name, a one-line summary, the sections (S<n>) and messages (M<n>) that describe it. A section may belong to several features when it describes several. Set alreadyBuilt when codebase items (tag codebase in the index) already deliver the feature as it is asked.
+3. **Features.** One per user-facing capability, named the way the client would name it: not one per screen, not one per CRUD verb ("Manage orders", not "Create order" + "Edit order" + "Delete order"), not so broad that one feature is half the product. A 500-page specification typically has 15 to 60 features; a short brief 3 to 15. For each: a kebab-case slug of at most 40 characters, a name, a one-line summary, the sections (S<n>) and messages (M<n>) that describe it. A section may belong to several features when it describes several. When the index shows the feature already (codebase items, a `Status:` decision), reuse its slug from the index exactly, never a new one for the same capability. Then set its material, how the material presents it:
+   - built: the codebase items (tag codebase in the index) already deliver it as the material describes it, or the material describes it as delivered.
+   - changes: it exists in the code and the material asks to change or extend it now.
+   - new: the material asks for it and the code does not have it.
+   - reference: the material only describes it (a whole-product spec, a pitch, delivered work) and does not ask for it now.
+   The member's note decides what is reference and what is asked for; without one, material that asks for something is new or changes.
 4. **Cross-cutting areas.** Sections and messages about roles and permissions in general, the data model, non-functional needs (performance, security, privacy, accessibility, languages, availability), integrations with other systems, and notifications go to an area: roles, data, nfr, integrations or notifications.
 5. **Suggested features**: what the product needs but nobody named. Walk this list and keep only what applies to this product: sign-in and sign-up, account recovery, invitations, user and role administration, settings, notifications, an audit log, search, exports and imports, onboarding, billing and payments, legal pages and consent, data deletion on request, help and support. Then add the table-stakes from your comparables that nobody named: "users of comparable products expect X" is a valid why. Each with a why that names the consequence of leaving it out, and "required" set only when the product is unsafe or unlawful without it (say why in one line; empty otherwise). A suggestion is only offered: it never enters the scope until a person picks MVP or Later on the Scope card, so never fold one into a named feature or treat it as asked for. Never suggest what the client explicitly excluded, and never duplicate a named feature.
 6. **What the material contradicts, leaves open and misses**, shown to the human before anything else so a misread is caught early:
@@ -46,7 +53,7 @@ You see summaries only: the new client messages verbatim, the title and summary 
 - Expect more features than the client listed, never fewer: everything the material asks for, plus what it left unsaid. A feature the material describes at length must never be missing, whatever it is called.
 
 Answer with one JSON object and nothing else:
-{"product":{"purpose":"","users":"","problems":"","successMeasures":"","constraints":"","businessModel":"","coreLoop":"","comparables":"","technical":"","risks":""},"roles":[{"slug":"","name":"","summary":""}],"features":[{"slug":"","name":"","summary":"","sections":["S1"],"messages":["M1"],"alreadyBuilt":false}],"areas":[{"area":"data","sections":[],"messages":[]}],"suggested":[{"slug":"","name":"","summary":"","why":"","required":""}],"contradictions":[{"text":"","sources":["S1","M2"]}],"missing":[""],"engagement":"","effortScore":0}
+{"product":{"purpose":"","users":"","problems":"","successMeasures":"","constraints":"","businessModel":"","coreLoop":"","comparables":"","technical":"","risks":""},"roles":[{"slug":"","name":"","summary":""}],"features":[{"slug":"","name":"","summary":"","sections":["S1"],"messages":["M1"],"material":"new"}],"areas":[{"area":"data","sections":[],"messages":[]}],"suggested":[{"slug":"","name":"","summary":"","why":"","required":""}],"contradictions":[{"text":"","sources":["S1","M2"]}],"missing":[""],"engagement":"","effortScore":0}
 
 ## Progress
 

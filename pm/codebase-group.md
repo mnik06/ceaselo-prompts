@@ -5,8 +5,10 @@ The repository was outlined already; its features are read in parallel groups. W
 ## The repository's outline
 {{outline}}
 
-## Your group's features (slug: name (status) — summary [where it lives])
+## Your group's features (slug: name (status) — summary; the open pull request it is on [where it lives])
 {{features}}
+
+A feature whose line names an open pull request ("Open PR #<number> on <head>") is delivered on that branch, not on the checked-out one: read its files there with `git show origin/<head>:<path>` (list them with `git ls-tree -r --name-only origin/<head> -- <dir>`), and its requirements cite paths from that branch. A feature only extended by a pull request is read on the checked-out branch.
 
 Read each feature's code in full, starting from its paths: routes and handlers, screens, validation, the states it moves records through, its errors, empty states and limits. List any path you did not get to under `skippedPaths` instead of guessing what it does. Use kb_search first: never repeat a requirement the knowledge base already holds.
 

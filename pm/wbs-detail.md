@@ -8,7 +8,7 @@ Each ticket with its feature, the requirement keys it delivers, the prototype sc
 
 ## The rest of the breakdown
 
-Other tickets of the project, for context only: name them under Out of scope when they deliver something a reader might expect here, and under Notes for the Architect when yours depends on them.
+Other tickets of the project, for context only: name them under Out of scope when they deliver something a reader might expect here. Dependencies are already the ticket graph; do not restate them.
 
 {{otherTickets}}
 

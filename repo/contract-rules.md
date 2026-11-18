@@ -7,13 +7,15 @@ The command contract is exactly one JSON object of this shape:
   "deploy": string | null, "deployPreview": string | null,
   "verify": { "steps": { "name": string, "command": string, "kind": "typecheck" | "build" | "lint" | "test" | "other" }[] },   // the floor, in order, fail fast
   "ledgers": { "name": string, "paths": string[], "regenerate": string }[],
-  "db": { "template": string, "create": string, "drop": string } | null,   // placeholders {db} and {template}
+  "db": { "template": string, "create": string, "drop": string } | null,   // three shell commands, see below
   "ports": { "block": number, "env": { [ENV_NAME: string]: number } } | null,   // env name -> offset inside the block
   "toolchain": { "node": string | null, "packageManager": string | null, "flutter": string | null },  // see below
   "instructions": string | null                // see below
 }
 
 Rules: every command runs with `sh -c` at the root of the repository; nothing is assumed about the package manager or the database, so every tool a command needs is named by the command itself. Dependencies are installed against one shared store: use `$CEASELO_PACKAGE_STORE` where the tool takes a store or cache directory. A stack gets its database name in `$CEASELO_DB_NAME` and its ports as the env variables listed in `ports.env`; `readyUrl` may use `{NAME}` for one of those ports. `ports` is null for a repository that serves nothing on a port (a mobile app, a library, a CLI), and `db` is null for one without a database. Use null for what neither the repository nor the preset defines.
+
+`db` holds three shell commands, never names: the machine fills `{template}` with its template database's name and `{db}` with the ticket's. `template` creates database `{template}` and migrates it to the default branch's schema (it runs in a checkout of the default branch); `create` clones `{template}` into `{db}`, so every ticket starts migrated in a fraction of a second; `drop` drops `{db}` if it exists. For Postgres, for example: `"template": "createdb {template} && DATABASE_URL=postgres://localhost/{template} pnpm db:migrate"`, `"create": "createdb -T {template} {db}"`, `"drop": "dropdb --if-exists {db}"`. A contract whose `template` lacks `{template}`, or whose `create` or `drop` lacks `{db}`, is refused.
 
 The floor (`verify.steps`) is what every change must pass before its tests, cheapest first, and is refused unless it holds:
 - every step has a `kind`: `typecheck`, `build`, `lint`, `test` or `other` (code or project generation, formatting checks);

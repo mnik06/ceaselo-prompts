@@ -1,5 +1,5 @@
 {
-  "version": "v0.17.0",
+  "version": "v0.18.0",
   "kitVersion": "1.1.1",
   "prompts": [
     {
@@ -379,6 +379,27 @@
         "kbIndex",
         "sourceTitles",
         "note"
+      ]
+    },
+    {
+      "name": "pm/spec-check",
+      "file": "pm/spec-check.md",
+      "vars": [
+        "projectName",
+        "repo",
+        "codeFeatures",
+        "materialFeatures",
+        "openPullRequests"
+      ]
+    },
+    {
+      "name": "pm/grill-review",
+      "file": "pm/grill-review.md",
+      "vars": [
+        "projectName",
+        "kbIndex",
+        "questions",
+        "room"
       ]
     },
     {

@@ -6,6 +6,6 @@ Its command contract, which every session already receives (do not repeat these 
 
 {{current}}
 
-Never restate what the repository's own CLAUDE.md, AGENTS.md or agent docs already say; Claude reads those in the checkout. When the repository has no such docs, cover where each kind of code goes, the conventions to follow, generated code and migrations and how to produce them, and the traps. Always cover what no file holds: test accounts and fixtures, external services and how their credentials reach the code, quirks of the environment. At most 60 lines of Markdown; no triple-backtick fences.
+Never restate what the repository's own CLAUDE.md, AGENTS.md or agent docs already say; Claude reads those in the checkout. When the repository has no such docs, cover where each kind of code goes, the conventions to follow, generated code and migrations and how to produce them, and the traps. Always cover what no file holds: test accounts and fixtures, external services and how their credentials reach the code, quirks of the environment. At most 60 lines of Markdown. Shape it for a person to scan: a few `## ` sections (only those with content, from: Layout, Conventions, Generated code and migrations, Accounts and fixtures, Services and secrets, Environment, Traps), each a list of `- ` bullets, one fact per bullet, a blank line before each heading; no prose paragraphs and no triple-backtick fences.
 
 Answer with exactly one JSON object and nothing else: { "instructions": string }

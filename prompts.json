@@ -1,6 +1,6 @@
 {
-  "version": "v0.21.0",
-  "kitVersion": "1.1.1",
+  "version": "v0.22.0",
+  "kitVersion": "1.2.0",
   "prompts": [
     {
       "name": "system/echo",
@@ -516,6 +516,25 @@
         "routes",
         "screens",
         "findings"
+      ]
+    },
+    {
+      "name": "pm/prototype-extend",
+      "file": "pm/prototype-extend.md",
+      "vars": [
+        "kitCatalogue",
+        "designRules",
+        "fidelityRules",
+        "projectName",
+        "brief",
+        "shell",
+        "data",
+        "outline",
+        "ask",
+        "featureSlugs",
+        "roleSlugs",
+        "ticketKeys",
+        "rejected"
       ]
     },
     {

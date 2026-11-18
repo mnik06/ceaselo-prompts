@@ -43,15 +43,16 @@ One JSON object only, no prose:
 {"brief": {"mood": "calm", "density": "comfortable", "tokens": {"accent": "#2f6feb", "neutral": "slate", "radius": "soft"}, "voice": "", "rationale": ""},
  "shell": "<div class=\"…\">… <span data-slot=\"logo\"></span> … <main data-slot=\"screens\"></main> …</div>",
  "data": "window.APP_DATA = { … };",
- "plan": [{"route": "orders", "title": "Orders", "summary": "Find and manage orders", "features": ["orders"], "roles": ["admin"], "reqs": ["REQ-3"], "states": ["default", "empty", "loading", "error", "create-sheet"], "mobile": false, "links": ["orders/detail"], "group": "orders"}],
+ "plan": [{"route": "orders", "title": "Orders", "summary": "Find and manage orders", "features": ["orders"], "roles": ["admin"], "reqs": ["REQ-3"], "states": ["default", "empty", "loading", "error", "create-sheet"], "mobile": false, "links": ["orders/detail"], "group": "orders", "tickets": []}],
  "screens": [{"route": "orders", "html": "<div data-state=\"default\">…</div><div data-state=\"empty\">…</div>…"}]}
 
 - Routes are kebab-case without "#/" ("orders", "orders/detail"); links name planned routes only; a detail screen may read an id after the route (#/orders/detail?id=3) through `window.__prototype.params()`.
 - Write "screens" only when the plan has 4 screens or fewer: then write every planned screen there, and no later session runs. Above 4, leave "screens" out: parallel sessions write them faster.
 - A screen's "html" is its content only: one element data-state="<state>" per listed state, holding that state's full rendering (default first). Never write data-screen, the coverage attributes, a <style>, a control bar or routing code: code adds them.
+- "tickets" lists the keys of the tickets in the ask that a screen is built for (each such key on at least one screen); leave it empty when the ask names none.
 - At most 200 screens, and far fewer for a small spec (step 3): a variation that differs only by state or role is a state or role, not a screen.
 - Hard limits; an answer over any of them is refused whole and written again:
-  - each plan entry: route at most 120 characters; title and summary 1 to 200 characters; at most 20 features, 20 roles, 60 REQ keys and 60 links; 1 to 12 states, each kebab-case; group at most 60 characters.
+  - each plan entry: route at most 120 characters; title and summary 1 to 200 characters; at most 20 features, 20 roles, 60 REQ keys and 60 links; 1 to 12 states, each kebab-case; group at most 60 characters; at most 20 ticket keys.
   - brief: voice at most 600 characters, rationale at most 1,500.
   - shell at most 200,000 characters; data at most 400,000; each screen's "html" at most 100,000.{{rejected}}
 

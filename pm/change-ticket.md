@@ -4,6 +4,8 @@ Write the ticket of a confirmed change to "{{projectName}}": its title, its full
 
 {{summary}}
 
+Effort score: {{effortScore}}. The change was grilled with the member before this card was confirmed: every decision above is settled. State each as a fact of the product in the description and turn each into acceptance criteria; never write "defaults", "assumed" or "unless you say otherwise", and never reopen a decision.
+
 ## Requirements of the project (key: title)
 
 {{requirements}}
@@ -16,10 +18,11 @@ Read the requirements, decisions and screens this change touches in full with kb
 
 ## This ticket
 
-- Write as many criteria as the change needs to be fully checked, at most 20. A change that touches a screen carries that screen's standing blocks for the parts it changes.
+- Acceptance criteria are mandatory: as many as the change needs to be fully checked, at most 20, and at least 3 when the effort score is 20 or more. Every decision above becomes at least one criterion. A change that touches a screen carries that screen's standing blocks for the parts it changes.
 - `reqKeys` lists the keys of the requirements this change modifies or delivers, only keys listed above; empty when none applies.
+- The title names the outcome in plain words (at most 100 characters), never the member's request verbatim.
 
-Answer with one JSON object `{"title":"<at most 100 characters>","description":"<markdown with the eight headings>","reqKeys":["REQ-n"],"ac":["..."]}` and nothing else.{{rejected}}
+Answer with one JSON object `{"title":"<at most 100 characters>","description":"<markdown with the eight headings>","reqKeys":["REQ-n"],"ac":["..."]}` and nothing else. It must be valid JSON: escape every double quote inside a string as \" and every newline as \n.{{rejected}}
 
 ## Progress
 

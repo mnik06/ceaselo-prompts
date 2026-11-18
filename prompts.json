@@ -1,5 +1,5 @@
 {
-  "version": "v0.19.0",
+  "version": "v0.20.0",
   "kitVersion": "1.1.1",
   "prompts": [
     {
@@ -201,6 +201,7 @@
         "projectName",
         "summary",
         "requirements",
+        "effortScore",
         "ticketRules",
         "acLibrary",
         "rejected"

@@ -1,7 +1,15 @@
 Generate the project skeleton and the agent docs for this repository from its preset, in the current directory.
-Preset: {{preset}}
+Preset: {{preset}}{{humanInstructions}}
 
-The command contract the machines will run (JSON):
-{{contract}}
+If the repository already holds code from an earlier attempt, keep it and finish it rather than starting over.
 
-Write the code, a root CLAUDE.md, the per-layer agent docs the preset asks for and a .gitignore that keeps dependencies and build output out of git. Make `install`, `build` and every `verify` step of the contract pass. Do not commit or push: the runtime commits and pushes when the floor is green. Stop when done.
+Write the code, a .gitignore that keeps dependencies and build output out of git, and the agent docs:
+- a root CLAUDE.md that stays short: what the repository is, a map of where each kind of code lives, the rules that hold everywhere, and pointers to the per-layer docs;
+- one doc per layer or area the preset names (for example agent-docs/<layer>.md), read only when working there: its conventions, where new code goes, generated code and migrations and how to produce them, how to test it, and its traps.
+The docs never repeat the commands of the contract below: every session receives the contract separately.
+
+Run the install, the build and every floor step yourself until they pass, on the tools you find on this machine. Do not commit or push: when you are done, the machine provisions the contract's toolchain, runs `install`, `build` and every `verify` step of the contract you answer, in order, and commits and pushes only when all of them pass.
+
+{{contractRules}}
+
+End your turn with the contract object for this repository as you leave it, and nothing after it. Pin in `toolchain` what you built with.

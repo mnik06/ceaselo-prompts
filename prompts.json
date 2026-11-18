@@ -1,5 +1,5 @@
 {
-  "version": "v0.13.0",
+  "version": "v0.14.0",
   "kitVersion": "1.1.1",
   "prompts": [
     {
@@ -16,6 +16,7 @@
         "preset",
         "repository",
         "humanInstructions",
+        "contractRules",
         "rejected"
       ]
     },
@@ -24,7 +25,8 @@
       "file": "repo/boilerplate.md",
       "vars": [
         "preset",
-        "contract"
+        "humanInstructions",
+        "contractRules"
       ]
     },
     {
@@ -36,6 +38,11 @@
         "repository",
         "current"
       ]
+    },
+    {
+      "name": "repo/contract-rules",
+      "file": "repo/contract-rules.md",
+      "vars": []
     },
     {
       "name": "ticket-plan",

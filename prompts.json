@@ -1,5 +1,5 @@
 {
-  "version": "v0.27.0",
+  "version": "v0.29.0",
   "kitVersion": "2.1.0",
   "prompts": [
     {
@@ -183,7 +183,10 @@
         "ticketKey",
         "diffs",
         "plan",
-        "deviations"
+        "deviations",
+        "screenshots",
+        "journey",
+        "retry"
       ]
     },
     {
@@ -204,6 +207,16 @@
         "text",
         "reason",
         "acs"
+      ]
+    },
+    {
+      "name": "pm/ticket-reply",
+      "file": "pm/ticket-reply.md",
+      "vars": [
+        "ticketKey",
+        "ticketTitle",
+        "stops",
+        "messages"
       ]
     },
     {

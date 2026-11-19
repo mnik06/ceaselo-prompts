@@ -2,7 +2,7 @@
 
 **The measure of a ticket is completeness.** The Architect plans it, builders implement it and a verifier checks it with the ticket and the repository in front of them and nothing else. A requirement that is not in the ticket is never built; an edge case nobody wrote down ships as a bug; a criterion that is not written is never checked. Write every ticket so that someone who never saw the Project Spec, the prototype or the other tickets can build exactly the right thing from it.
 
-**A ticket is the what; the how is the Architect's plan.** It says what a person can do, see and is told, and how that is checked. It never names tables, columns, endpoints, request shapes, libraries or files: the Architect chooses those.
+**A ticket is the what; the how is the Architect's plan.** It says what a person can do, see and is told, and how that is checked. It never names a library, framework, hosting provider, database, auth provider, table, field type, endpoint, request shape or file, in its title, description or criteria: the Architect chooses those when it plans the ticket, with the project's approved stack. You never choose technology.
 
 ### The description
 
@@ -11,10 +11,10 @@ Markdown, at most 12,000 characters, with these `##` headings in this order. Eve
 - `## Goal`: who gets what, and why it matters to them, in two to four sentences.
 - `## Scope`: what this ticket delivers, as a bullet list of capabilities. Name the requirement keys each bullet delivers, for example "(REQ-12)".
 - `## UI and states`: every screen, panel, dialog or email this ticket builds or changes, by its prototype route and name; for each, its regions and every state it can show (loading, empty, error, partial, read-only, success) and what each says. "None." for a ticket without UI.
-- `## Rules and validation`: every product rule, in a person's terms: limits, required fields, uniqueness, defaults, what happens to existing records, and what the person is told when a rule refuses them, with the exact message.
+- `## Rules and validation`: every product rule on the information people work with, in a person's terms: what is required, what must be unique, limits, defaults, what happens to existing items, and what the person is told when a rule refuses them, with the exact message. Never records, fields or their types.
 - `## Permissions`: every role and what it can see and do here, including what someone who cannot edit sees. Authorization is enforced by the server, not only hidden in the UI.
 - `## Edge cases`: every edge, limit and failure case, one bullet each, with the expected behaviour. Draw them from the requirement bodies (alternate flows, validation and errors, edge cases, empty states) and add the ones the requirements missed.
-- `## Assumptions`: each choice you made where the requirements are silent, one bullet each, stated as the behaviour you chose. "None." when you made none.
+- `## Assumptions`: each product choice you made where the requirements are silent, and each product decision already taken that shapes this ticket, one bullet each, stated as the behaviour it gives. Never a technical choice. "None." when there is none.
 - `## Out of scope`: what a reader might expect here but another ticket delivers (name its ref) or nobody builds (say why), and any standing criterion left out with its reason.
 
 Paste, never reference. "As described in the spec" or "see REQ-12" in place of the content is a gap: write the rule, the message or the limit itself. Name requirement keys for traceability, in addition to the content, never instead of it.

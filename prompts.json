@@ -1,5 +1,5 @@
 {
-  "version": "v0.22.0",
+  "version": "v0.23.0",
   "kitVersion": "1.2.0",
   "prompts": [
     {
@@ -120,6 +120,18 @@
         "brief",
         "loopRules",
         "projectInstructions"
+      ]
+    },
+    {
+      "name": "ticket-env-repair",
+      "file": "ticket/env-repair.md",
+      "vars": [
+        "ticketKey",
+        "failedRepo",
+        "tail",
+        "missing",
+        "repos",
+        "contractRules"
       ]
     },
     {
@@ -280,7 +292,6 @@
         "features",
         "requirements",
         "screens",
-        "presets",
         "note",
         "sprintLengthWeeks",
         "billableCapacityHours",

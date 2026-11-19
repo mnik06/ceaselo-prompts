@@ -10,7 +10,7 @@ Effort score: {{effortScore}}. The change was grilled with the member before thi
 
 {{requirements}}
 
-Read the requirements, decisions and screens this change touches in full with kb_search, kb_get and doc_section before writing. The ticket describes the product after the change: what changes, what stays, and every existing behaviour the change could break.
+Read the requirements, decisions and screens this change touches in full with kb_search, kb_get and doc_section before writing. The ticket describes the product after the change: what changes, what stays, and every existing behaviour the change could break. Like every ticket it is product only: it never names a library, framework, hosting provider, database, auth provider, table, field type, endpoint or file.
 
 {{ticketRules}}
 

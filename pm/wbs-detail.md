@@ -22,6 +22,8 @@ Every rule, flow, state, validation, edge case and empty state in these bodies e
 
 {{screens}}{{note}}
 
+The Foundation ticket, when it is yours, is written like every other: what a person can open, see and reach once the app runs on its staging address, never the technology behind it.
+
 Read anything else you need with kb_search, kb_get and doc_section (decisions, assumptions, the Project Spec). Do not rely on memory of other tickets' content.
 
 {{ticketRules}}

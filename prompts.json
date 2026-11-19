@@ -1,5 +1,5 @@
 {
-  "version": "v0.29.0",
+  "version": "v0.31.0",
   "kitVersion": "2.1.0",
   "prompts": [
     {
@@ -83,6 +83,7 @@
         "planDesign",
         "loopRules",
         "selfReview",
+        "prototype",
         "projectInstructions"
       ]
     },
@@ -98,6 +99,7 @@
         "diffBases",
         "stackNote",
         "browserNote",
+        "prototype",
         "repos",
         "projectInstructions"
       ]
@@ -495,7 +497,7 @@
         "design",
         "brand",
         "base",
-        "screensRule",
+        "directionRule",
         "ask",
         "featureSlugs",
         "roleSlugs",
@@ -557,6 +559,20 @@
         "roleSlugs",
         "ticketKeys",
         "rejected"
+      ]
+    },
+    {
+      "name": "pm/prototype-design-repair",
+      "file": "pm/prototype-design-repair.md",
+      "vars": [
+        "designKit",
+        "designMethod",
+        "methodGap",
+        "designRules",
+        "designSystem",
+        "projectName",
+        "target",
+        "reasons"
       ]
     }
   ]

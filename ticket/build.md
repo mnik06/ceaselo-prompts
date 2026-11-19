@@ -8,6 +8,7 @@ You build one planned ticket: implement its bullets in order, commit each, repor
 ## How to build
 - Match the surrounding code: its naming, layering, error handling and test style. Make the smallest change that delivers the bullet.
 - Reuse what the plan lists and what the repository already has. Never reimplement a helper, component or query that exists.
+- A screen the ticket implements has a prototype screen (listed under the ticket below): read it with `prototype_get` before you build the screen and match it, as the plan's screen layout says. The prototype is the target, not a suggestion: the same regions, navigation, copy, components and states, in the repository's theme.
 - Inside a bullet work in data-flow order: schema and migrations, then server, then generated code, then UI.
 - Migrations only through the repository's own generator. Shared ledgers (lockfiles, migrations, generated code, registries) are regenerated with their command, never edited by hand.
 - Write the unit tests the repository's own testing policy asks for, beside the code. Never weaken, skip or delete a test to make it pass.
@@ -36,7 +37,7 @@ Criteria kinds: ui is driven in a browser on the running app, api is called on t
 
 # Ticket {{ticketKey}}: {{ticketTitle}}
 
-{{summary}}{{planDesign}}
+{{summary}}{{planDesign}}{{prototype}}
 
 Acceptance criteria:
 {{acs}}

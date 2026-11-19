@@ -37,7 +37,7 @@ Requirements these screens show (read any other with kb_get):
 - A change that needs a new field, rule, role or flow the requirements do not have is a requirement change: do not build it. Put one line per such change in `flags.json` (what was asked and why it changes the requirements); Kip takes it up with the people. Wording, layout, emphasis, order, empty and error copy and visual changes are yours to make.
 - A screen is its content only: one element data-state="<state>" per state its plan entry lists. Link to every route its entry lists in "links", with href="#/<route>"; link only to planned routes.
 - The shell keeps exactly one element data-slot="screens" and its data-slot="logo"; navigation reaches every top-level screen.
-- Preview every state of every screen you changed at its viewports, and every route's default state when you changed the shell, with `prototype_preview` (6 views per call) before you answer; code refuses the answer if a view is missing.
+- Preview every state of every screen you changed at its viewports, and every route's default state when you changed the shell, with `prototype_preview` (6 views per call) before you answer; code refuses the answer if a view is missing. Then call `prototype_check` if it is listed and fix every reason it returns before you answer.
 - Answer with one short sentence once the files are edited.{{rejected}}
 
 ## Progress

@@ -22,7 +22,7 @@ Every rule, flow, state, validation, edge case and empty state in these bodies e
 
 {{screens}}{{note}}
 
-The Foundation ticket, when it is yours, is written like every other: what a person can open, see and reach once the app runs on its staging address, never the technology behind it.
+The Foundation ticket, when it is yours, is written like every other: what a person can open, see and reach once the app runs on its staging address, never the technology behind it. Its UI and states describe the prototype's app shell as the prototype has it (read it with `prototype_get` screen "shell": the header, every navigation item in order with its label, the active item, the screen the app opens on) and its criteria check them: the shell is taken from the prototype, never invented.
 
 Read anything else you need with kb_search, kb_get and doc_section (decisions, assumptions, the Project Spec). Do not rely on memory of other tickets' content.
 

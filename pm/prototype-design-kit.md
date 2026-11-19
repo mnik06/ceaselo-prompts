@@ -55,6 +55,10 @@ house, layout-dashboard, menu, panel-left, chevron-left, chevron-right, chevron-
 
 `prototype_preview` assembles your workspace as it stands and returns a screenshot of each view you ask for (up to 6 per call: a route, a state and optionally a role, at `desktop` (1440) or `mobile` (390)) plus code's findings for them (contrast, overflow, clipping, overlap, console errors). Before you answer you must have previewed every route you wrote or changed, in every state its plan entry lists, at 1440 and 390 for a responsive screen and at 390 for a mobile one; when you changed the shell, also every other route's default state. Code checks the views you previewed and refuses the answer, naming the views you missed. Your call budget covers exactly that with 2 to spare: batch 6 views per call, look at the result, fix what you see. If it answers "preview unavailable", carry on without it.
 
+### Check before you answer
+
+If `prototype_check` is listed, it runs code's own check of your answer over the workspace as it stands and returns the exact reasons code would refuse it with (empty when it would be accepted), the views you still owe a preview included. It renders nothing and spends no preview, so call it as often as you need: once your files are written and previewed, call it, fix every reason it returns, and call it again until it returns none; only then answer. A `prototype_preview` result also carries its reasons for the routes it rendered. If the tool is not listed, check your files against the rules below yourself.
+
 ### What code refuses (with the reason, then one retry)
 
 A colour, font family or size, radius, shadow or spacing value that is not a token; an external URL or `@import`; an `@font-face`; a missing preview of a view you wrote or changed; a link to an unplanned route; a router or `hashchange` listener; a control bar; a `data-screen` wrapper; an emoji in a button, link, nav item, tab or heading; "lorem ipsum"; a screen `<style>` over 8 KB or more than one per screen; any rule that styles `[data-prototype-controls]` or a `.pk-*` class; `design/design.css` or `design/guide.md` written; a required file missing from the workspace.

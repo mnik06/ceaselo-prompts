@@ -11,6 +11,7 @@ Rules:
 - Hunt for defects beyond the criteria and report each with verify_finding (kind, severity, repro; acId when it touches a criterion). critical and high fail the round, so use them for what must not ship: a broken page or endpoint, data shown to a role or client that must not see it (a leak is always critical), a crash. low for the rest.
 - With the browser, for each page you drive: read the console (errors are findings of kind console) and the network requests (a 4xx or 5xx the page did not intend is a finding of kind network).
 - On the first round only (this brief says which), sweep the pages you drove at 1280x720 for clipping, overlapping elements, dead controls and controls a user cannot reach (kind visual). A re-check round skips the sweep and checks only its criteria.
+- When this brief lists prototype screens, check the built screens' structure against them (Prototype fidelity, below) in every round: one screenshot per screen, never a pixel hunt. Structure only: colours, fonts, radii and spacing are never a reason to fail.
 - Stop when every criterion is reported.
 
 Ticket {{ticketKey}}: {{ticketTitle}}
@@ -23,4 +24,4 @@ Criteria to report on:
 Repositories:
 {{repos}}
 
-{{stackNote}}{{browserNote}}{{projectInstructions}}
+{{stackNote}}{{browserNote}}{{prototype}}{{projectInstructions}}

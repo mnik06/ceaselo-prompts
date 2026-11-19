@@ -1,6 +1,6 @@
 {
-  "version": "v0.23.0",
-  "kitVersion": "1.2.0",
+  "version": "v0.27.0",
+  "kitVersion": "2.1.0",
   "prompts": [
     {
       "name": "system/echo",
@@ -26,6 +26,7 @@
       "vars": [
         "preset",
         "humanInstructions",
+        "designTokens",
         "contractRules"
       ]
     },
@@ -42,6 +43,16 @@
     {
       "name": "repo/contract-rules",
       "file": "repo/contract-rules.md",
+      "vars": []
+    },
+    {
+      "name": "repo/theme-adapter-mantine",
+      "file": "repo/theme-adapter-mantine.md",
+      "vars": []
+    },
+    {
+      "name": "repo/theme-adapter-shadcn",
+      "file": "repo/theme-adapter-shadcn.md",
       "vars": []
     },
     {
@@ -428,21 +439,40 @@
       ]
     },
     {
-      "name": "pm/prototype-styles",
-      "file": "pm/prototype-styles.md",
+      "name": "pm/prototype-preselect",
+      "file": "pm/prototype-preselect.md",
       "vars": [
         "projectName",
         "overview",
-        "product"
+        "features",
+        "product",
+        "design",
+        "catalogue"
       ]
     },
     {
-      "name": "pm/prototype-shell",
-      "file": "pm/prototype-shell.md",
+      "name": "pm/prototype-design-kit",
+      "file": "pm/prototype-design-kit.md",
+      "vars": []
+    },
+    {
+      "name": "pm/prototype-design-method",
+      "file": "pm/prototype-design-method.md",
+      "vars": []
+    },
+    {
+      "name": "pm/prototype-design-rules",
+      "file": "pm/prototype-design-rules.md",
+      "vars": []
+    },
+    {
+      "name": "pm/prototype-design-shell",
+      "file": "pm/prototype-design-shell.md",
       "vars": [
-        "kitCatalogue",
+        "designKit",
+        "designMethod",
         "designRules",
-        "fidelityRules",
+        "designSystem",
         "projectName",
         "specSections",
         "spec",
@@ -452,6 +482,7 @@
         "design",
         "brand",
         "base",
+        "screensRule",
         "ask",
         "featureSlugs",
         "roleSlugs",
@@ -459,83 +490,50 @@
       ]
     },
     {
-      "name": "pm/prototype-screens",
-      "file": "pm/prototype-screens.md",
+      "name": "pm/prototype-design-screens",
+      "file": "pm/prototype-design-screens.md",
       "vars": [
-        "kitCatalogue",
+        "designKit",
         "designRules",
-        "fidelityRules",
+        "designSystem",
         "projectName",
         "brief",
         "shell",
         "data",
         "plan",
+        "reference",
         "routes",
         "requirements",
         "rejected"
       ]
     },
     {
-      "name": "pm/prototype-kit",
-      "file": "pm/prototype-kit.md",
-      "vars": []
-    },
-    {
-      "name": "pm/design-rules",
-      "file": "pm/design-rules.md",
-      "vars": []
-    },
-    {
-      "name": "pm/prototype-fidelity-low",
-      "file": "pm/prototype-fidelity-low.md",
-      "vars": []
-    },
-    {
-      "name": "pm/prototype-fidelity-mid",
-      "file": "pm/prototype-fidelity-mid.md",
-      "vars": []
-    },
-    {
-      "name": "pm/prototype-fidelity-high",
-      "file": "pm/prototype-fidelity-high.md",
-      "vars": []
-    },
-    {
-      "name": "pm/prototype-critique",
-      "file": "pm/prototype-critique.md",
+      "name": "pm/prototype-design-revise",
+      "file": "pm/prototype-design-revise.md",
       "vars": [
+        "designKit",
         "designRules",
-        "fidelityRules",
+        "designSystem",
         "projectName",
-        "brief",
-        "plan",
-        "sheets",
-        "findings"
-      ]
-    },
-    {
-      "name": "pm/prototype-fix",
-      "file": "pm/prototype-fix.md",
-      "vars": [
-        "kitCatalogue",
-        "designRules",
-        "fidelityRules",
         "brief",
         "shell",
         "data",
         "plan",
-        "routes",
-        "screens",
-        "findings"
+        "part",
+        "target",
+        "designTarget",
+        "notes",
+        "requirements",
+        "rejected"
       ]
     },
     {
-      "name": "pm/prototype-extend",
-      "file": "pm/prototype-extend.md",
+      "name": "pm/prototype-design-extend",
+      "file": "pm/prototype-design-extend.md",
       "vars": [
-        "kitCatalogue",
+        "designKit",
         "designRules",
-        "fidelityRules",
+        "designSystem",
         "projectName",
         "brief",
         "shell",
@@ -545,26 +543,6 @@
         "featureSlugs",
         "roleSlugs",
         "ticketKeys",
-        "rejected"
-      ]
-    },
-    {
-      "name": "pm/prototype-revise",
-      "file": "pm/prototype-revise.md",
-      "vars": [
-        "kitCatalogue",
-        "designRules",
-        "fidelityRules",
-        "projectName",
-        "brief",
-        "shell",
-        "data",
-        "plan",
-        "part",
-        "target",
-        "notes",
-        "requirements",
-        "answer",
         "rejected"
       ]
     }

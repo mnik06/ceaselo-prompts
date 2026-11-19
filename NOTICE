@@ -1,0 +1,7 @@
+Ceaselo prompt set
+
+pm/prototype-design-method.md is adapted from the "frontend-design" skill by Anthropic, PBC
+(claude-plugins-official, plugins/frontend-design/skills/frontend-design/SKILL.md), licensed under the
+Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0). Changes: reworded for clickable
+product prototypes built from a curated font library in a session workspace, with an in-session preview tool;
+web-page hero guidance dropped; a visual motif and the product's form factor added.

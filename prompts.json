@@ -1,5 +1,5 @@
 {
-  "version": "v0.31.0",
+  "version": "v0.32.0",
   "kitVersion": "2.1.0",
   "prompts": [
     {
@@ -38,6 +38,13 @@
         "contract",
         "repository",
         "current"
+      ]
+    },
+    {
+      "name": "repo-instructions-loop",
+      "file": "repo/instructions-loop.md",
+      "vars": [
+        "instructions"
       ]
     },
     {
@@ -143,6 +150,8 @@
         "failedRepo",
         "tail",
         "missing",
+        "service",
+        "referenced",
         "repos",
         "contractRules"
       ]
@@ -208,7 +217,8 @@
         "kind",
         "text",
         "reason",
-        "acs"
+        "acs",
+        "tickets"
       ]
     },
     {

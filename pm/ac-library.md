@@ -8,6 +8,8 @@ Reusable criteria, one block per kind of surface. A ticket that builds a surface
 
 A ticket that builds several surfaces pastes several blocks. A criterion two blocks share is pasted once.
 
+**A criterion that crosses surfaces is pasted where both exist.** "Opening a row lands on that record" needs the record's page; "a record created in the form appears in the list" needs the form and the list. Paste such a criterion only into the ticket that builds the later of the two surfaces; on the earlier ticket, name that ticket under `## Out of scope` instead.
+
 ### Block `ui`: any UI surface
 
 Every screen, panel, modal, drawer or step the ticket adds or changes.

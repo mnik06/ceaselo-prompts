@@ -1,11 +1,17 @@
-Redraft the `## Feedback loops` section of the instructions for the agents that plan, build, verify and review tickets in this repository: only what they cannot learn from the repository itself.
+Redraft this repository's instructions: free text on its card that the project's people read and that every agent planning, building, verifying and reviewing its tickets receives and must follow.
 Preset: {{preset}}
 
-Its command contract, which every session already receives (do not repeat these commands):
+Its command contract, which the machine runs:
 {{contract}}{{repository}}
 
 {{current}}
 
-Write exactly one `## Feedback loops` section and nothing else, at most 40 lines of `- ` bullets, one fact per bullet. Cover, in this order: how to check a change here, fastest check first (one test file, one package's typecheck, the affected tests); how to run the stack and its local services; how to sign in or seed a test account locally; how to drive the UI (where it opens, the route to start from). Name a contract command only to add what it lacks (a narrower form, a flag, a port), never to repeat it, and never restate what the repository's own CLAUDE.md, AGENTS.md or agent docs already say. No other heading, no prose paragraph, no triple-backtick fence. The rest of the instructions is kept as written: never add anything outside this section.
+Write clear, readable Markdown, short headings and bullets, at most 80 lines, covering what is true of this repository and only that:
+- **Checking a change.** The feedback loop: the actual commands that check nothing is broken, named as runnable commands (for example "Typecheck: `pnpm run typecheck`", "Lint: `pnpm run lint`", "Test: `pnpm run test`"), fastest first; when the repository has one command that runs them all (a preflight, `check` or `ci` script), name it as the check to run before a change is done. Agents run exactly this loop to check their work and are not done while it is red, and the machine's final check runs the same commands, so name only commands that exist in the repository and pass on its current code. A narrower form for a quick iteration (one test file, one package) may follow, marked as such.
+- **Local database and services**, when the stack has them: what they are (for example a local Supabase with Postgres, Auth and Storage), how a local migration is generated and applied, which the agent does itself, and how migrations reach staging and production, read from the preset, the CI workflows and the deploy configuration. State only what the files and the preset show; when nothing in them deploys or migrates staging or production, say that it is not set up, never invent one.
+- **How to sign in or seed a test account locally, and how to drive the UI** (where it opens, the route to start from), when the stack has a UI.
+- A few genuinely useful gotchas, one line each. No trivia an agent finds on its own (an IPv6 localhost, a port of an admin console, how to open a database shell), and nothing the repository's own CLAUDE.md, AGENTS.md or agent docs already say.
 
-Answer with exactly one JSON object and nothing else: { "instructions": string }
+No triple-backtick fence. `loop` is the feedback loop your text states, in its order, each command exactly as written: `tests` is true for a step that runs the test suite (a preflight that runs the tests counts); null only when the text states no check.
+
+Answer with exactly one JSON object and nothing else: { "instructions": string, "loop": { "name": string, "command": string, "tests": boolean }[] | null }

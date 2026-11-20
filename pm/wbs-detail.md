@@ -2,7 +2,7 @@ Write the full description and acceptance criteria of these tickets of "{{projec
 
 ## Your tickets
 
-Each ticket with its feature, the requirement keys it delivers, the prototype screens it builds and the tickets it depends on:
+Each ticket with its feature, the requirement keys it delivers, the prototype screens it builds, the tickets it depends on, and, from the dependency graph, the screens that exist when it lands and the screens not built yet with the ticket that builds each. A criterion of a ticket only reaches screens that exist when it lands; one that needs a screen not built yet is written on the ticket that builds that screen.
 
 {{tickets}}
 

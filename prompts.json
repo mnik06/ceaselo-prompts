@@ -1,6 +1,6 @@
 {
-  "version": "v0.35.0",
-  "kitVersion": "2.3.0",
+  "version": "v0.36.0",
+  "kitVersion": "2.3.1",
   "prompts": [
     {
       "name": "system/echo",
@@ -541,6 +541,7 @@
       "file": "pm/prototype-design-screens.md",
       "vars": [
         "designKit",
+        "designMethod",
         "designRules",
         "designSystem",
         "projectName",
@@ -559,6 +560,7 @@
       "file": "pm/prototype-design-revise.md",
       "vars": [
         "designKit",
+        "designMethod",
         "designRules",
         "designSystem",
         "projectName",
@@ -579,6 +581,7 @@
       "file": "pm/prototype-design-extend.md",
       "vars": [
         "designKit",
+        "designMethod",
         "designRules",
         "designSystem",
         "projectName",
@@ -599,7 +602,6 @@
       "vars": [
         "designKit",
         "designMethod",
-        "methodGap",
         "designRules",
         "designSystem",
         "projectName",

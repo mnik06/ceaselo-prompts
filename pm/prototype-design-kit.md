@@ -15,7 +15,7 @@ The prototype is built on one curated design system the human chose, with their 
 | `system/components.css` | The component CSS (for reference). Read-only. |
 | `system/system.json` | The system's id, version, tweaks and font pair. Read-only. |
 | `context.json` | Project name and roles. Read-only. |
-| `design/design.json` | `{"formFactor": "web", "desktop" or "mobile" (seeded from the Project Spec; keep it), "voice": "<how the product speaks>", "rationale": "<why the screens look this way>"}` |
+| `design/design.json` | `{"formFactor": "web", "desktop" or "mobile" (seeded from the Project Spec; keep it), "voice": "<how the product speaks>", "rationale": "<the directives the screen sessions follow, at most 2,400 characters>"}` |
 | `shell.html` | The persistent frame every screen sits in. |
 | `data.js` | One script defining `window.APP_DATA`. |
 | `plan.json` | The screen plan, a JSON array. |
@@ -58,7 +58,7 @@ house, layout-dashboard, menu, panel-left, chevron-left, chevron-right, chevron-
 
 ### Check before you answer
 
-If `prototype_check` is listed, it runs code's own check of your answer over the workspace as it stands and returns the exact reasons code would refuse it with (empty when it would be accepted), the views you still owe a preview included. It renders nothing and spends no preview, so call it as often as you need: once your files are written and previewed, call it, fix every reason it returns, and call it again until it returns none; only then answer. A `prototype_preview` result also carries its reasons for the routes it rendered. If the tool is not listed, check your files against the rules below yourself.
+If `prototype_check` is listed, it runs code's own check of your answer over the workspace as it stands and returns the exact reasons code would refuse it with (empty when it would be accepted), the views you still owe a preview included. Its `findings` are minor (a button or toast label not taken from `APP_DATA.copy`): never a refusal, but fix them. It renders nothing and spends no preview, so call it as often as you need: once your files are written and previewed, call it, fix every reason it returns, and call it again until it returns none; only then answer. A `prototype_preview` result also carries its reasons for the routes it rendered. If the tool is not listed, check your files against the rules below yourself.
 
 ### What code refuses (with the reason, then one retry)
 

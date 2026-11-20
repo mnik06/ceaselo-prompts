@@ -1,6 +1,8 @@
 {{designKit}}
 
-{{designMethod}}{{methodGap}}{{designRules}}
+{{designMethod}}
+
+{{designRules}}
 
 {{designSystem}}
 

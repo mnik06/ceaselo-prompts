@@ -15,7 +15,7 @@ The prototype is built on one curated design system the human chose, with their 
 | `system/components.css` | The component CSS (for reference). Read-only. |
 | `system/system.json` | The system's id, version, tweaks and font pair. Read-only. |
 | `context.json` | Project name and roles. Read-only. |
-| `design/design.json` | `{"formFactor": "web" or "mobile", "voice": "<how the product speaks>", "rationale": "<why the screens look this way>"}` |
+| `design/design.json` | `{"formFactor": "web", "desktop" or "mobile" (seeded from the Project Spec; keep it), "voice": "<how the product speaks>", "rationale": "<why the screens look this way>"}` |
 | `shell.html` | The persistent frame every screen sits in. |
 | `data.js` | One script defining `window.APP_DATA`. |
 | `plan.json` | The screen plan, a JSON array. |
@@ -33,7 +33,8 @@ A screen (and the shell) may carry one `<style>` block of at most 8 KB; code sco
 - The shell holds one element `data-slot="logo"` (leave it empty: code puts the uploaded logo or the product name there) and exactly one element `data-slot="screens"`.
 - A screen file is its content only: one element `data-state="<state>"` per state its plan entry lists, `default` first, every other state with `hidden`. Code wraps it in `<section data-screen="<route>">` with its coverage attributes; never write `data-screen` yourself.
 - A screen's behaviour (filtering a list, re-rendering after a create) goes in one inline `<script>` that registers `window.__prototype.onShow(function (view) { … })`; `view` has route, state, role and params. Read data from `window.APP_DATA`.
-- Mobile form factor: code places the whole app in a phone frame on desktop and drops the frame on a phone. Design for 390 px; never build your own device frame.
+- Mobile form factor: code places the whole app in a phone frame (status bar, Dynamic Island, home indicator) on desktop and drops the frame on a phone. Design for 402 px; never build your own device frame.
+- Desktop form factor: code places the whole app in a window frame whose title bar shows the logo and the product name. The shell is an `.app--window` with the menu bar, the toolbar, the panes and the status bar inside it; no screen is mobile, every view is previewed at 1440 only, and you never build your own window or title bar.
 
 ### Runtime helpers
 
@@ -53,7 +54,7 @@ house, layout-dashboard, menu, panel-left, chevron-left, chevron-right, chevron-
 
 ### Previewing is required
 
-`prototype_preview` assembles your workspace as it stands and returns a screenshot of each view you ask for (up to 6 per call: a route, a state and optionally a role, at `desktop` (1440) or `mobile` (390)) plus code's findings for them (contrast, overflow, clipping, overlap, console errors). Before you answer you must have previewed every route you wrote or changed, in every state its plan entry lists, at 1440 and 390 for a responsive screen and at 390 for a mobile one; when you changed the shell, also every other route's default state. Code checks the views you previewed and refuses the answer, naming the views you missed. Your call budget covers exactly that with 2 to spare: batch 6 views per call, look at the result, fix what you see. If it answers "preview unavailable", carry on without it.
+`prototype_preview` assembles your workspace as it stands and returns a screenshot of each view you ask for (up to 6 per call: a route, a state and optionally a role, at `desktop` (1440) or `mobile` (402)) plus code's findings for them (contrast, overflow, clipping, overlap, console errors). Before you answer you must have previewed every route you wrote or changed, in every state its plan entry lists, at 1440 and 402 for a responsive screen and at 402 for a mobile one; when you changed the shell, also every other route's default state. Code checks the views you previewed and refuses the answer, naming the views you missed. Your call budget covers exactly that with 2 to spare: batch 6 views per call, look at the result, fix what you see. If it answers "preview unavailable", carry on without it.
 
 ### Check before you answer
 

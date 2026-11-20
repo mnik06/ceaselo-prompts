@@ -22,7 +22,7 @@ Outlines, borders, numbering, dividers and labels encode something about the con
 
 ### Restraint
 
-Spend your boldness in one place per screen: one memorable element (a figure set in `.display`, an illustration, a striking empty state), everything around it quiet. Hold a quality floor without announcing it: responsive down to 390 px, visible keyboard focus, AA contrast, every listed state composed.
+Spend your boldness in one place per screen: one memorable element (a figure set in `.display`, an illustration, a striking empty state), everything around it quiet. Hold a quality floor without announcing it: responsive down to 402 px, visible keyboard focus, AA contrast, every listed state composed.
 
 ### Words are design
 

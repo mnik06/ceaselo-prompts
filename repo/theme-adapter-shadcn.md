@@ -33,25 +33,30 @@ Component sizes go into the generated components: `Button` and `Input` heights f
 | Prototype class | shadcn/ui |
 | --- | --- |
 | `.app`, `.sidebar` (`__brand`, `__group`, `__footer`), `.app__main` | `SidebarProvider`, `Sidebar` (`SidebarHeader`, `SidebarGroup`, `SidebarFooter`), `SidebarInset` |
-| `.nav__item` (`aria-current`), `.nav__badge`, `.sidebar__section` | `SidebarMenuButton isActive` in `SidebarMenuItem`, `SidebarMenuBadge`, `SidebarGroupLabel` |
-| `.topbar` (`__nav`, `__actions`), `.tabbar` | a `header` with `NavigationMenu` and the actions; a fixed bottom `nav` of icon-and-label links |
+| `.nav` (`--horizontal`), `.nav__item` (`aria-current`), `.nav__badge`, `.sidebar__section` | `SidebarMenuButton isActive` in `SidebarMenuItem`, `SidebarMenuBadge`, `SidebarGroupLabel` |
+| `.app--topbar`, `.topbar` (`__brand`, `__nav`, `__actions`), `.tabbar` (`__item`) | a `header` with `NavigationMenu` and the actions; a fixed bottom `nav` of icon-and-label links |
 | `.page`, `.page--narrow`, `.page--wide` | a container `mx-auto max-w-[var(--ds-page-max)]`, `max-w-[var(--ds-page-narrow)]`, full width |
-| `.page-header` (`__title`, `__description`, `__actions`), `.breadcrumbs` | a `header` `flex justify-between` with `h1`, a muted `p`, the buttons; `Breadcrumb` |
-| `.stack`, `.cluster`, `.split`, `.toolbar` (`.grow`, `.push`), `.gap-*` | `flex flex-col`, `flex flex-wrap`, `flex justify-between`, `flex items-center` (`flex-1`, `ml-auto`), `gap-*` |
+| `.page-header` (`__title`, `__description`, `__actions`), `.breadcrumbs`, `.section` | a `header` `flex justify-between` with `h1`, a muted `p`, the buttons; `Breadcrumb` |
+| `.stack`, `.cluster`, `.split`, `.toolbar` (`.grow`, `.push`), `.gap-*`, `.align-start` | `flex flex-col`, `flex flex-wrap`, `flex justify-between`, `flex items-center` (`flex-1`, `ml-auto`), `gap-*`, `items-start` |
 | `.grid`, `.grid--2` / `--3` / `--4`, `.columns` | `grid grid-cols-[repeat(auto-fill,minmax(var(--ds-grid-min),1fr))]`, `grid sm:grid-cols-n`, `grid lg:grid-cols-3` with a `col-span-2` main |
 | `.btn`, `--primary`, `--secondary`, `--ghost`, `--danger` | `Button variant="outline"`, `"default"`, `"secondary"`, `"ghost"`, `"destructive"` |
 | `.btn--sm` / `--lg`, `--icon`, `--block`, `aria-busy` | `size="sm"` / `"lg"`, `size="icon"` (with `aria-label`), `w-full`, `disabled` with a spinner |
-| `.card` (`__header`, `__title`, `__description`, `__body`, `__footer`), `--interactive` | `Card` (`CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`), a link-wrapped `Card` with a hover style |
-| `.table`, `.table--compact`, `.table__actions` | `Table` (`TableHeader`, `TableRow`, `TableHead`, `TableBody`, `TableCell`), smaller cell padding, a right-aligned cell of buttons |
+| `.card` (`__header`, `__title`, `__description`, `__body`, `__footer`), `--interactive`, `--flush` | `Card` (`CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, `CardFooter`), a link-wrapped `Card` with a hover style, `p-0` |
+| `.table`, `.table--compact`, `.table-wrap` (`--scroll`), `.table__actions` | `Table` (`TableHeader`, `TableRow`, `TableHead`, `TableBody`, `TableCell`), smaller cell padding, an `overflow-auto` wrapper (`max-h-[var(--ds-table-max-h)]`), a right-aligned cell of buttons |
 | `.field` (`__label`, `__hint`, `__error`, `__optional`) | `Field` with `FieldLabel`, `FieldDescription`, `FieldError` (`Label` and a muted `p` where `Field` is not installed) |
-| `.input`, `.select`, `.textarea`, `.check`, `.switch` | `Input`, `Select`, `Textarea`, `Checkbox`, `Switch` |
+| `.input`, `.select`, `.textarea`, `.check`, `.switch`, `.input-icon` | `Input`, `Select`, `Textarea`, `Checkbox`, `Switch`, `InputGroup` with an icon addon |
 | `.badge` (`--accent`, `--success`, `--warning`, `--danger`, `--info`, `--dot`), `.status` | `Badge` with `success`, `warning`, `info` variants added to `badge.tsx` from those tokens, `destructive`, `outline` with a dot |
-| `.alert` (`--info`, `--success`, `--warning`, `--danger`, `--banner`) | `Alert` (`AlertTitle`, `AlertDescription`), variants added the same way, `destructive` |
-| `.toast`, `.dialog` (`--sm`, `--lg`), `.dialog--drawer` | `Sonner`; `Dialog` (`sm:max-w-[var(--ds-dialog-w-sm)]` …); `Sheet side="right"` |
-| `.menu`, `.menu__item--danger`, `.tabs`, `.tab` | `DropdownMenu`, `DropdownMenuItem variant="destructive"`, `Tabs`, `TabsTrigger` |
+| `.alert` (`__body`, `__title`, `--info`, `--success`, `--warning`, `--danger`, `--banner`) | `Alert` (`AlertTitle`, `AlertDescription`), variants added the same way, `destructive` |
+| `.toast-region`, `.toast` (`__body`, `__title`, `--success`, `--warning`, `--danger`, `--info`), `.dialog` (`__header`, `__title`, `__body`, `__footer`, `--sm`, `--lg`), `.dialog--drawer` | `Sonner`; `Dialog` (`sm:max-w-[var(--ds-dialog-w-sm)]` …); `Sheet side="right"` |
+| `.menu` (`--start`, `__list`, `__item`, `__item--danger`), `.tabs`, `.tab` | `DropdownMenu`, `DropdownMenuItem variant="destructive"`, `Tabs`, `TabsTrigger` |
 | `.avatar` (`--sm`, `--lg`), `.avatar-group` | `Avatar` (`AvatarFallback` for initials), overlapping `Avatar`s |
-| `.stat`, `.meter`, `.bars` | a `Card` with a muted label, the value and a coloured delta; `Progress`; `Chart` (Recharts bar) |
-| `.list`, `.media`, `.empty` | a `divide-y` list; `flex gap-3` with `Avatar`; `Empty` (or a centred icon, title and text) |
-| `.skeleton`, `.spinner`, `.pagination`, `.steps`, `.dl`, `.divider` | `Skeleton`, `Spinner`, `Pagination`, a numbered `ol` with done states, a two-column `dl` grid, `Separator` |
-| `.placeholder`, `.icon` | `AspectRatio` over a `bg-secondary` box; the `lucide-react` icon of the same name |
-| `.muted`, `.strong`, `.text-sm`, `.num`, `.mono`, `.truncate` | `text-muted-foreground`, `font-semibold`, `text-sm`, `tabular-nums`, `font-mono`, `truncate` |
+| `.stat` (`__label`, `__value`, `__meta`, `__delta`, `__delta--up` / `--down`), `.meter` (`--success`, `--warning`, `--danger`), `.bars` (`__item`, `__bar`, `__bar--muted`, `__label`) | a `Card` with a muted label, the value and a coloured delta; `Progress`; `Chart` (Recharts bar) |
+| `.list` (`__item`, `__body`, `__title`, `__meta`), `.media` (`__body`, `__title`, `__meta`), `.empty` (`__icon`, `__title`, `__text`) | a `divide-y` list; `flex gap-3` with `Avatar`; `Empty` (or a centred icon, title and text) |
+| `.skeleton` (`--text`, `--title`, `--avatar`, `--block`), `.spinner`, `.spin`, `.pagination` (`__info`, `__pages`, `__item`), `.steps` (`__item`, `__item--done`), `.dl`, `.divider` (`--vertical`) | `Skeleton`, `Spinner`, `Pagination`, a numbered `ol` with done states, a two-column `dl` grid, `Separator` |
+| `.placeholder` (`--square`), `.icon` | `AspectRatio` over a `bg-secondary` box; the `lucide-react` icon of the same name |
+| `.muted`, `.strong`, `.medium`, `.text-xs`, `.text-sm`, `.text-lg`, `.text-success`, `.text-warning`, `.text-danger`, `.num`, `.mono`, `.truncate`, `.measure`, `.display` | `text-muted-foreground`, `font-semibold`, `font-medium`, `text-xs` / `text-sm` / `text-lg`, the success / warning / destructive text colours, `tabular-nums`, `font-mono`, `truncate`, `max-w-prose`, a display `h1` at `text-[length:var(--ds-text-display)]` |
+| `.app--window`, `.titlebar` (`__controls`, `__controls--end`, `__title`), `.menubar` (`__item`), `.kbd` | a desktop window layout: a full-height `flex flex-col`; the title bar belongs to the desktop shell (Electron/Tauri) or a header with the product name; `Menubar` (`MenubarMenu`, `MenubarTrigger`, `MenubarItem` with `MenubarShortcut`) |
+| `.toolbar--bar`, `.panes`, `.pane` (`--nav`, `--list`, `--detail`, `__header`, `__body`), `.statusbar` (`__item`) | a bordered `flex` row of buttons; `ResizablePanelGroup` of `ResizablePanel`s with `ResizableHandle`, each a `ScrollArea` with a sticky header; a bottom `flex` of muted `text-xs` items |
+| `.appbar` (`--large`, `__title`, `__action`), `.large-title` | a sticky top `header` `flex justify-between` with ghost `Button`s; an `h1` at `text-[length:var(--ds-text-large-title)]` under it, the bar's title fading in on scroll |
+| `.inset-list` (`__header`, `__item`, `__value`, `__footer`) | a rounded `Card` holding a `divide-y` list, a muted uppercase `text-xs` label above and below; a value is `ml-auto text-muted-foreground` |
+| `.swipe-row` (`__content`, `__actions`, `__action`, `__action--accent`, `__action--danger`), `.dialog--sheet`, `.sheet__handle`, `.tabbar__item--primary` | a row whose actions reveal on swipe (`overflow-x-auto snap-x`, or a gesture library) as default and destructive `Button`s; `Drawer` (vaul) with its handle; a raised round primary `Button size="icon"` in the tab bar |

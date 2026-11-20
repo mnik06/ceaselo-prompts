@@ -44,7 +44,8 @@ A message marked "the member's note about the attached material: how to read it"
    - contradictions: every place two sources disagree, and every point the material marks as TBD, not final or to be decided; one line each with the S<n>/M<n> refs on each side.
    - missing: what a product like this needs that the material says nothing about (who pays, how users sign in, what happens to data, launch date), one line each.
    - engagement: the facts about the engagement itself, not the product: deadlines, what the client expects from us and in which format, how they buy, who the stakeholders are. "Not stated." when the material is silent.
-7. **effortScore**, 0 to 100: how big and intricate the whole product is to specify and build. Bands: tiny under 20 (a page or a script), small under 45 (a handful of screens, one role, no integrations), medium under 75 (several roles, real workflows, an integration or two), large 75 and above (many features, money, permissions, several integrations, regulation). It sets how many questions the human is asked.
+7. **formFactor**: the device the product's main users use it on, which the prototype and the build follow. `value` is `web` (a responsive web app), `desktop` (a desktop app) or `mobile` (a native app or a mobile-first PWA: both are mobile), judged from the app its main users use (a secondary admin app never sets it); `why` one sentence in the material's words; `sources` the S<n>/M<n> refs that say so. `settled` is false when the material does not decide it (no device named, or web and phone use both stated with neither leading): put your recommendation in `value` and the person is asked. When the index already shows a `Form factor:` decision and the material says nothing new about it, give null.
+8. **effortScore**, 0 to 100: how big and intricate the whole product is to specify and build. Bands: tiny under 20 (a page or a script), small under 45 (a handful of screens, one role, no integrations), medium under 75 (several roles, real workflows, an integration or two), large 75 and above (many features, money, permissions, several integrations, regulation). It sets how many questions the human is asked.
 
 ## Rules, checked by machine
 
@@ -54,7 +55,7 @@ A message marked "the member's note about the attached material: how to read it"
 - Expect more features than the client listed, never fewer: everything the material asks for, plus what it left unsaid. A feature the material describes at length must never be missing, whatever it is called.
 
 Answer with one JSON object and nothing else:
-{"product":{"purpose":"","users":"","problems":"","successMeasures":"","constraints":"","businessModel":"","coreLoop":"","comparables":"","technical":"","risks":""},"roles":[{"slug":"","name":"","summary":""}],"features":[{"slug":"","name":"","summary":"","sections":["S1"],"messages":["M1"],"material":"new"}],"areas":[{"area":"data","sections":[],"messages":[]}],"suggested":[{"slug":"","name":"","summary":"","why":"","required":""}],"contradictions":[{"text":"","sources":["S1","M2"]}],"missing":[""],"engagement":"","effortScore":0}
+{"product":{"purpose":"","users":"","problems":"","successMeasures":"","constraints":"","businessModel":"","coreLoop":"","comparables":"","technical":"","risks":""},"roles":[{"slug":"","name":"","summary":""}],"features":[{"slug":"","name":"","summary":"","sections":["S1"],"messages":["M1"],"material":"new"}],"areas":[{"area":"data","sections":[],"messages":[]}],"suggested":[{"slug":"","name":"","summary":"","why":"","required":""}],"contradictions":[{"text":"","sources":["S1","M2"]}],"missing":[""],"engagement":"","formFactor":{"value":"web","settled":true,"why":"","sources":["S1"]},"effortScore":0}
 
 ## Progress
 

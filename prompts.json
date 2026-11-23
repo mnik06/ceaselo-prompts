@@ -1,5 +1,5 @@
 {
-  "version": "v0.46.0",
+  "version": "v0.47.0",
   "kitVersion": "2.5.0",
   "prompts": [
     {
@@ -33,6 +33,7 @@
         "preset",
         "humanInstructions",
         "platform",
+        "starter",
         "designTokens",
         "workflow",
         "contractRules"

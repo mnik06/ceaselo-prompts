@@ -16,6 +16,17 @@ Effort score: {{effortScore}}. The change was grilled with the member before thi
 
 Read the requirements, decisions and screens this change touches in full with kb_search, kb_get and doc_section before writing. The ticket describes the product after the change: what changes, what stays, and every existing behaviour the change could break. Like every ticket it is product only: it never names a library, framework, hosting provider, database, auth provider, table, field type, endpoint or file.
 
+## What is true, in this order
+
+1. The change above, with the grill answers it carries: settled, never reopened.
+2. The code: the project's repos at their default-branch head, under "## Code this turn" at the end of this prompt. Before writing, read the files of the screens and behaviour this change touches. The ticket describes the product as the code builds it today: never a behaviour or element the code no longer has, even when a requirement or decision still names it. With no "## Code this turn" section the code was not readable this time: work from the change and the knowledge base.
+3. The knowledge base (requirements, decisions, screens), for what the code does not show.
+
+## Revisions and Kip's calls
+
+- `revisions`: when code you read contradicts a requirement or decision about how the product behaves today, revise it: `{"key":"REQ-n","body":"<the item's whole body, rewritten to match the code>","path":"<owner/repo>:<the file you read>"}`. Never one about behaviour not built yet (its feature has no code, or its tickets are not done), and never for what this change itself alters: that is the ticket's job. At most 8; none is the usual case.
+- `calls`: a fork you had to settle that no grill answer, decision of the change or knowledge base item covers: `{"title":"<at most 120 characters>","decision":"<what you settled, at most 500>","why":"<one line>"}`. Code records each as Kip's call on the ticket and lists it under Assumptions: never write them there yourself. At most 8; none is fine.
+
 {{scopeRule}}
 
 {{ticketRules}}
@@ -29,7 +40,7 @@ Read the requirements, decisions and screens this change touches in full with kb
 - `reqKeys` lists the keys of the requirements this change modifies or delivers, only keys listed above; empty when none applies.
 - The title follows the title rule above: the part of the product this change builds or changes, a noun phrase of 2 to 6 words, at most 60 characters, no trailing period, never the member's request verbatim and never the title of another ticket of the project.
 
-Answer with one JSON object `{"title":"<noun phrase, at most 60 characters>","surface":"<surface id or exact name>","description":"<markdown with the eight headings>","reqKeys":["REQ-n"],"ac":["..."]}` and nothing else. It must be valid JSON: escape every double quote inside a string as \" and every newline as \n.{{rejected}}
+Answer with one JSON object `{"title":"<noun phrase, at most 60 characters>","surface":"<surface id or exact name>","description":"<markdown with the eight headings>","reqKeys":["REQ-n"],"ac":["..."],"revisions":[],"calls":[]}` and nothing else. It must be valid JSON: escape every double quote inside a string as \" and every newline as \n.{{rejected}}
 
 ## Progress
 

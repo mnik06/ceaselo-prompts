@@ -1,5 +1,5 @@
 {
-  "version": "v0.49.0",
+  "version": "v0.52.0",
   "kitVersion": "2.5.0",
   "prompts": [
     {
@@ -176,6 +176,18 @@
         "service",
         "referenced",
         "repos",
+        "contractRules"
+      ]
+    },
+    {
+      "name": "repo-env-repair",
+      "file": "repo/env-repair.md",
+      "vars": [
+        "repoName",
+        "situation",
+        "tail",
+        "service",
+        "contract",
         "contractRules"
       ]
     },

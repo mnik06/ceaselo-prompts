@@ -20,6 +20,17 @@ Effort score of the change: {{effortScore}}. The change was settled with the mem
 
 Read the requirements, decisions and screens this change touches in full with kb_search, kb_get and doc_section before writing. Like every ticket the result is product only: it never names a library, framework, hosting provider, database, auth provider, table, field type, endpoint or file.
 
+## What is true, in this order
+
+1. The change above, with the grill answers it carries: settled, never reopened.
+2. The code: the project's repos at their default-branch head, under "## Code this turn" at the end of this prompt. Before writing, read the files of the screens and behaviour this change touches. The ticket describes the product as the code builds it today: never a behaviour or element the code no longer has, even when a requirement or decision still names it. With no "## Code this turn" section the code was not readable this time: work from the change and the knowledge base.
+3. The knowledge base (requirements, decisions, screens), for what the code does not show.
+
+## Revisions and Kip's calls
+
+- `revisions`: when code you read contradicts a requirement or decision about how the product behaves today, revise it: `{"key":"REQ-n","body":"<the item's whole body, rewritten to match the code>","path":"<owner/repo>:<the file you read>"}`. Never one about behaviour not built yet (its feature has no code, or its tickets are not done), and never for what this change itself alters: that is the ticket's job. At most 8; none is the usual case.
+- `calls`: a fork you had to settle that no grill answer, decision of the change or knowledge base item covers: `{"title":"<at most 120 characters>","decision":"<what you settled, at most 500>","why":"<one line>"}`. Code records each as Kip's call on the ticket and lists it under Assumptions: never write them there yourself. At most 8; none is fine.
+
 {{scopeRule}}
 
 {{ticketRules}}
@@ -35,7 +46,7 @@ Read the requirements, decisions and screens this change touches in full with kb
 - Give `description` only for a ticket whose description changes; omit it to keep the description as it is.
 - Each ticket stays on its surface (named with it above) and in that surface's terms: a ticket on a surface with no web or PWA target never gains a mention of a browser, a tab, an address or URL, a page reload, developer tools or the Tab key.
 
-Answer with one JSON object `{"tickets":[{"key":"<ticket key>","description":"<the full new description, only when it changes>","ac":[{"n":1,"text":"..."},{"text":"a new criterion"}]}]}` holding every ticket above exactly once and nothing else. It must be valid JSON: escape every double quote inside a string as \" and every newline as \n.{{rejected}}
+Answer with one JSON object `{"tickets":[{"key":"<ticket key>","description":"<the full new description, only when it changes>","ac":[{"n":1,"text":"..."},{"text":"a new criterion"}]}],"revisions":[],"calls":[]}` holding every ticket above exactly once and nothing else. It must be valid JSON: escape every double quote inside a string as \" and every newline as \n.{{rejected}}
 
 ## Progress
 

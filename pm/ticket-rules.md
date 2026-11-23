@@ -4,6 +4,14 @@
 
 **A ticket is the what; the how is the Architect's plan.** It says what a person can do, see and is told, and how that is checked. It never names a library, framework, hosting provider, database, auth provider, table, field type, endpoint, request shape or file, in its title, description or criteria: the Architect chooses those when it plans the ticket, with the project's approved stack. You never choose technology, and the ticket never depends on it: the same ticket holds whatever the stack turns out to be. On an API, CLI or library surface the product is that interface: its operations, commands, inputs, answers and errors are what its users see, and are named as they see them, never the code behind them.
 
+### The title
+
+A person scanning the ticket list must recognise at once which part of the application the ticket builds. The title names that part: the feature area and the piece of it, as a noun phrase of 2 to 6 words and at most 60 characters ("Existing task editing", "Task list filters", "Sign-in and sign-out", "App shell and staging"). On a product with more than one surface it starts with the surface's name when the part alone would not say which ("Admin shell and staging").
+
+- A noun phrase, never a sentence or a verb-led clause ("A person can edit a task…", "Lets admins…"), with no trailing period.
+- It names the product part, never a technology, a layer or an acceptance criterion: what a person does with the part belongs in the description and the criteria.
+- It is unique among the project's tickets: two tickets on one area name their different parts ("Task creation", "Existing task editing").
+
 ### The description
 
 Markdown, at most 12,000 characters, with these `##` headings in this order. Every heading is present; write "None." under one that truly has nothing, never drop it.

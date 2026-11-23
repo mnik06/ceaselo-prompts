@@ -24,7 +24,7 @@ The approved prototype: each screen's route, name, summary, and the features, ro
 
 ## How to cut the breakdown
 
-- **One Foundation ticket per surface, then vertical slices.** Each surface below gets exactly one ticket with `foundation: true` and `surface` set to it, titled as listed (that title says what people get, never a technology):
+- **One Foundation ticket per surface, then vertical slices.** Each surface below gets exactly one ticket with `foundation: true` and `surface` set to it, titled as listed (a noun phrase naming the part people get, such as "App shell and staging", never a technology):
 
 {{foundations}}
 
@@ -39,7 +39,7 @@ The approved prototype: each screen's route, name, summary, and the features, ro
 - **Dependencies** reference ticket refs, never form a cycle and never point at a missing ticket. A ticket depends on what it consumes, so tickets that do not depend on each other can be built in parallel.
 - **HITL tickets** (`type: "hitl"`) are tasks only a human can do: content, legal sign-off, a decision outside the product. Each has a dependent ticket; set `hitl.dueBeforeRef` to the first ticket that needs it. Never write one asking for credentials, API keys or accounts of a technical service (hosting, database, auth, email, payments, analytics): code creates those tickets from the approved stack, and such a ticket is refused.
 - **Sprints** are {{sprintLengthWeeks}} weeks with {{billableCapacityHours}} billable hours each; code fills them from the estimates, so never size or merge tickets to fit them.
-- `ref` is a short unique id ("t1", "t2", ...). `title` is at most 160 characters and says what the user gets. `tags` holds at most a few short labels ("frontend", "api"); feature and foundation are recorded on their own.
+- `ref` is a short unique id ("t1", "t2", ...). `title` follows the title rule under "How a ticket is written". `tags` holds at most a few short labels ("frontend", "api"); feature and foundation are recorded on their own.
 
 ## Two ways to answer
 
@@ -53,7 +53,7 @@ The approved prototype: each screen's route, name, summary, and the features, ro
 
 ## Checked by machine
 
-The answer is refused, with the reasons, when a listed requirement is in no ticket's `reqKeys`, a `reqKeys` entry or a screen is unknown, a dependency is missing or circular, a dev ticket names no surface or one not listed, a surface listed with a Foundation title has no Foundation ticket or more than one, a Foundation ticket depends on another ticket, a HITL ticket has no dependent or asks for a declared service's credentials, or (12 tickets or fewer) a dev ticket lacks a description heading, its `reqKeys`, or at least 3 criteria when its effortScore is 20 or more, or a ticket on a surface with no web or PWA target mentions a browser, a tab, an address or URL, a page reload, developer tools or the Tab key.
+The answer is refused, with the reasons, when a title is over 60 characters or ends with a period, a listed requirement is in no ticket's `reqKeys`, a `reqKeys` entry or a screen is unknown, a dependency is missing or circular, a dev ticket names no surface or one not listed, a surface listed with a Foundation title has no Foundation ticket or more than one, a Foundation ticket depends on another ticket, a HITL ticket has no dependent or asks for a declared service's credentials, or (12 tickets or fewer) a dev ticket lacks a description heading, its `reqKeys`, or at least 3 criteria when its effortScore is 20 or more, or a ticket on a surface with no web or PWA target mentions a browser, a tab, an address or URL, a page reload, developer tools or the Tab key.
 
 Answer with one JSON object `{"tickets":[{ref,title,type,feature,surface,reqKeys,screens,foundation,dependsOn,effortScore,tags,hitl?,description?,ac?}]}` and nothing else.{{rejected}}
 

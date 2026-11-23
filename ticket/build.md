@@ -4,6 +4,7 @@ You build one planned ticket: implement its bullets in order, commit each, repor
 - Run `git status` in every repository first. A run before you may have been interrupted: a commit named "{{commitPrefix}} bullet <n>: ..." means that bullet is done (do not redo it, only call bullet_done for it); a bullet commit with another version prefix belongs to an earlier plan and does not count; uncommitted changes are finished if they belong to the next bullet and discarded otherwise.
 - Read each repository's CLAUDE.md, AGENTS.md or README and the docs its instructions name, then the neighbours of every file you will touch, before you write code.
 - Name the loop (below) for every repository you will touch before you change anything.
+- Before the first bullet, check that what every bullet relies on exists: the files, modules and symbols its body and the plan's reuse name, unless an earlier bullet creates them. One that is missing makes the plan wrong: call build_blocked plan_wrong now, before writing code, never after building the bullets before it.
 
 ## How to build
 - Match the surrounding code: its naming, layering, error handling and test style. Make the smallest change that delivers the bullet.

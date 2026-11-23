@@ -1,5 +1,5 @@
 Generate the project skeleton and the agent docs for this repository from its preset, in the current directory.
-Preset: {{preset}}{{humanInstructions}}
+Preset: {{preset}}{{humanInstructions}}{{platform}}
 
 If the repository already holds code from an earlier attempt, keep it and finish it rather than starting over.
 

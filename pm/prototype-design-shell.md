@@ -23,7 +23,7 @@ Features not in the MVP (plan none of their screens):
 {{scope}}
 
 Other decisions:
-{{decisions}}{{design}}{{brand}}{{base}}{{ask}}
+{{decisions}}{{design}}{{brand}}{{base}}{{ask}}{{surfaces}}
 
 Exact slugs and keys the machine check holds you to:
 - MVP features: {{featureSlugs}}

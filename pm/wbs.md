@@ -1,5 +1,9 @@
 Break "{{projectName}}" into a work breakdown: the tickets that deliver its MVP, their dependencies and their estimates. Builders and the Architect will work from these tickets alone, so the breakdown must leave nothing of the MVP unclaimed.
 
+## The product's surfaces
+
+{{platform}}
+
 ## Features and their scope
 
 Only features scoped `mvp` get tickets. Features scoped `later` or `out` get none, and no ticket claims their requirements.
@@ -20,7 +24,12 @@ The approved prototype: each screen's route, name, summary, and the features, ro
 
 ## How to cut the breakdown
 
-- **One Foundation ticket, then vertical slices.** Exactly one ticket carries `foundation: true`: the app runs, its shell and navigation are reachable, and it is live on a staging address. Title it for what people get ("The app opens on its staging address with its shell and navigation"), never for a technology. It builds the prototype's app shell as it is (its header, its navigation with every item in order, the screen the app opens on; read it with `prototype_get` screen "shell"), never a shell of its own: its `screens` lists the screen the app opens on, and every route the navigation reaches exists, as a placeholder until the ticket that builds it. It depends on no other ticket, and every other dev ticket depends on it, directly or through another ticket. On an existing codebase (see the note above) the app already runs: plan no Foundation ticket.
+- **One Foundation ticket per surface, then vertical slices.** Each surface below gets exactly one ticket with `foundation: true` and `surface` set to it, titled as listed (that title says what people get, never a technology):
+
+{{foundations}}
+
+  A GUI surface's Foundation builds that surface's prototype app shell as it is (its header, its navigation with every item in order, the screen it opens on; read it with `prototype_get` screen "shell" for the primary surface, "shell:<surface id>" for another), never a shell of its own: its `screens` lists the screen it opens on, and every route its navigation reaches exists, as a placeholder until the ticket that builds it. A CLI's Foundation installs and prints its help; an API's answers its first call; a library's installs and its entry point imports. A Foundation depends on no other ticket, and every other dev ticket depends on its own surface's Foundation, directly or through another ticket.
+- **One surface per ticket.** Every dev ticket sets `surface` to exactly one surface above, by its id or exact name. Work that spans two surfaces is two tickets, one per surface, with an edge between them (the one that consumes depends on the one that provides). A HITL ticket has no `surface`.
 - **Every other ticket is a vertical slice:** a capability a person can see working end to end, never a layer ("all the models", "all the endpoints") and never a technical ticket. Sign-up, sign-in, roles and the information a feature keeps are built inside the first slice that uses them: no "data model base", "auth setup" or "deployment" ticket.
 - **Product only.** The stack is not yours to choose: no ticket names a library, framework, hosting provider, database, auth provider, table, field type, endpoint or file. The Architect chooses those per ticket, with the project's approved stack.
 - **One feature per ticket.** `feature` is the feature slug the ticket belongs to (from the list above), or a short kebab-case slug for foundation or cross-cutting work (`foundation`, `roles`, `notifications`).
@@ -34,7 +43,7 @@ The approved prototype: each screen's route, name, summary, and the features, ro
 
 ## Two ways to answer
 
-**More than 12 tickets:** answer the skeleton only. Each ticket has `ref, title, type, feature, reqKeys, screens, foundation, dependsOn, effortScore, tags` and `hitl` for HITL tickets; leave out `description` and `ac`. Each feature group is detailed afterwards by its own session.
+**More than 12 tickets:** answer the skeleton only. Each ticket has `ref, title, type, feature, surface, reqKeys, screens, foundation, dependsOn, effortScore, tags` (no `surface` on a HITL ticket) and `hitl` for HITL tickets; leave out `description` and `ac`. Each feature group is detailed afterwards by its own session.
 
 **12 tickets or fewer:** write every ticket in full now: the skeleton fields plus `description` and `ac`, following the rules below. Read the requirement bodies with kb_get where they are not shown.
 
@@ -44,9 +53,9 @@ The approved prototype: each screen's route, name, summary, and the features, ro
 
 ## Checked by machine
 
-The answer is refused, with the reasons, when a listed requirement is in no ticket's `reqKeys`, a `reqKeys` entry or a screen is unknown, a dependency is missing or circular, a new codebase has no foundation ticket, there is more than one, the Foundation ticket depends on another ticket, a HITL ticket has no dependent or asks for a declared service's credentials, or (12 tickets or fewer) a dev ticket lacks a description heading, its `reqKeys`, or at least 3 criteria when its effortScore is 20 or more.
+The answer is refused, with the reasons, when a listed requirement is in no ticket's `reqKeys`, a `reqKeys` entry or a screen is unknown, a dependency is missing or circular, a dev ticket names no surface or one not listed, a surface listed with a Foundation title has no Foundation ticket or more than one, a Foundation ticket depends on another ticket, a HITL ticket has no dependent or asks for a declared service's credentials, or (12 tickets or fewer) a dev ticket lacks a description heading, its `reqKeys`, or at least 3 criteria when its effortScore is 20 or more, or a ticket on a surface with no web or PWA target mentions a browser, a tab, an address or URL, a page reload, developer tools or the Tab key.
 
-Answer with one JSON object `{"tickets":[{ref,title,type,feature,reqKeys,screens,foundation,dependsOn,effortScore,tags,hitl?,description?,ac?}]}` and nothing else.{{rejected}}
+Answer with one JSON object `{"tickets":[{ref,title,type,feature,surface,reqKeys,screens,foundation,dependsOn,effortScore,tags,hitl?,description?,ac?}]}` and nothing else.{{rejected}}
 
 ## Progress
 

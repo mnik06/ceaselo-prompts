@@ -3,7 +3,7 @@ The command contract is exactly one JSON object of this shape:
   "lockfiles": string[],                       // files whose contents decide whether dependencies must be installed again
   "install": string, "build": string,
   "test": { "all": string, "affected": string | null },   // affected may use {base}
-  "run": { "command": string, "readyUrl": string | null, "readyTimeoutS": number, "memoryMb": number },
+  "run"?: { "command": string, "readyUrl": string | null, "readyTimeoutS": number, "memoryMb": number },   // left out only when every surface below is driven by cli or none
   "deploy": string | null, "deployPreview": string | null,
   "verify": { "steps": { "name": string, "command": string, "kind": "typecheck" | "build" | "lint" | "test" | "other" }[] },   // the floor, in order, fail fast
   "ledgers": { "name": string, "paths": string[], "regenerate": string }[],
@@ -11,12 +11,15 @@ The command contract is exactly one JSON object of this shape:
   "ports": { "block": number, "env": { [ENV_NAME: string]: number } } | null,   // env name -> offset inside the block
   "toolchain": { "node": string | null, "packageManager": string | null, "flutter": string | null },  // see below
   "services": { "name": string, "scope": "repo" | "ticket", "start": string, "check": string, "stop": string | null, "memoryMb": number, "needs": ("docker")[], "configFiles"?: string[] }[] | null,   // local dependencies the stack needs running, see below
+  "surfaces": { "surfaceId": string, "drive": "browser" | "cli" | "http" | "none", "proxyOf"?: ("ios" | "android" | "macos" | "windows" | "linux")[], "build"?: string }[],   // see below
   "env": { "file": string, "derive": string | null, "vars": { "key": string, "kind": "local" | "placeholder" | "secret", "requiredToBoot": boolean, "value": string | null, "note": string | null }[] } | null,   // see below
   "instructions": string | null,               // see below
   "loop": { "name": string, "command": string, "tests": boolean }[] | null   // see below
 }
 
-Rules: every command runs with `sh -c` at the root of the repository; nothing is assumed about the package manager or the database, so every tool a command needs is named by the command itself. Dependencies are installed against one shared store: use `$CEASELO_PACKAGE_STORE` where the tool takes a store or cache directory. A stack gets its database name in `$CEASELO_DB_NAME` and its ports as the env variables listed in `ports.env`; `readyUrl` may use `{NAME}` for one of those ports. `ports` is null for a repository that serves nothing on a port (a mobile app, a library, a CLI), and `db` is null for one without a database. Use null for what neither the repository nor the preset defines.
+Rules: every command runs with `sh -c` at the root of the repository; nothing is assumed about the package manager or the database, so every tool a command needs is named by the command itself. Dependencies are installed against one shared store: use `$CEASELO_PACKAGE_STORE` where the tool takes a store or cache directory. A stack gets its database name in `$CEASELO_DB_NAME` and its ports as the env variables listed in `ports.env`; `readyUrl` may use `{NAME}` for one of those ports. `ports` is null for a repository that serves nothing on a port (a library, a CLI, a native app with no web build), and `db` is null for one without a database. Use null for what neither the repository nor the preset defines.
+
+`surfaces` lists the product surfaces this repository serves (their ids are listed with the product's surfaces in this prompt), each with how a verifier reaches it on the running stack: `browser` for a GUI (its web or PWA target, or a web build of the same UI standing in for its native targets, every one of which is then named in `proxyOf`), `cli` for a command line (the verifier runs the built command and records the transcript), `http` for an API served by `run` (the verifier calls it and records request and response), `none` for what nothing here can drive (a library; a GUI only when its stack was approved with "UI checks by hand"). `build` only when the surface builds with another command than the repository's `build` (a web build of a native app: `flutter build web`). A GUI surface left without a drive, a native target driven by `browser` but missing from `proxyOf`, or a surface id that is not the product's is refused. List none only for a repository that serves no surface.
 
 `db` holds three shell commands, never names: the machine fills `{template}` with its template database's name and `{db}` with the ticket's. `template` creates database `{template}` and migrates it to the default branch's schema (it runs in a checkout of the default branch); `create` clones `{template}` into `{db}`, so every ticket starts migrated in a fraction of a second; `drop` drops `{db}` if it exists. For Postgres, for example: `"template": "createdb {template} && DATABASE_URL=postgres://localhost/{template} pnpm db:migrate"`, `"create": "createdb -T {template} {db}"`, `"drop": "dropdb --if-exists {db}"`. A contract whose `template` lacks `{template}`, or whose `create` or `drop` lacks `{db}`, is refused.
 

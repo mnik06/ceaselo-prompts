@@ -1,5 +1,9 @@
 Write the ticket of a confirmed change to "{{projectName}}": its title, its full description and its acceptance criteria. The Architect, the builders and the verifier will work from this ticket alone.
 
+## The product's surfaces
+
+{{platform}}
+
 ## The change
 
 {{summary}}
@@ -19,10 +23,11 @@ Read the requirements, decisions and screens this change touches in full with kb
 ## This ticket
 
 - Acceptance criteria are mandatory: as many as the change needs to be fully checked, at most 20, and at least 3 when the effort score is 20 or more. Every decision above becomes at least one criterion. A change that touches a screen carries that screen's standing blocks for the parts it changes.
+- `surface` names the one surface of the platform block this ticket builds, by its id or exact name; the ticket is written in that surface's terms (a surface with no web or PWA target: no browser, tab, address or URL, page reload, developer tools or Tab key). A change that spans two surfaces is written for the surface it mostly changes, and its Out of scope names what the other surface still needs.
 - `reqKeys` lists the keys of the requirements this change modifies or delivers, only keys listed above; empty when none applies.
 - The title names the outcome in plain words (at most 100 characters), never the member's request verbatim.
 
-Answer with one JSON object `{"title":"<at most 100 characters>","description":"<markdown with the eight headings>","reqKeys":["REQ-n"],"ac":["..."]}` and nothing else. It must be valid JSON: escape every double quote inside a string as \" and every newline as \n.{{rejected}}
+Answer with one JSON object `{"title":"<at most 100 characters>","surface":"<surface id or exact name>","description":"<markdown with the eight headings>","reqKeys":["REQ-n"],"ac":["..."]}` and nothing else. It must be valid JSON: escape every double quote inside a string as \" and every newline as \n.{{rejected}}
 
 ## Progress
 

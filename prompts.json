@@ -1,6 +1,6 @@
 {
-  "version": "v0.40.0",
-  "kitVersion": "2.3.1",
+  "version": "v0.41.0",
+  "kitVersion": "2.4.0",
   "prompts": [
     {
       "name": "system/echo",
@@ -16,6 +16,7 @@
         "preset",
         "repository",
         "humanInstructions",
+        "platform",
         "contractRules",
         "rejected"
       ]
@@ -26,6 +27,7 @@
       "vars": [
         "preset",
         "humanInstructions",
+        "platform",
         "designTokens",
         "workflow",
         "contractRules"
@@ -97,7 +99,8 @@
         "loopRules",
         "selfReview",
         "prototype",
-        "projectInstructions"
+        "projectInstructions",
+        "surface"
       ]
     },
     {
@@ -212,6 +215,7 @@
       "file": "pm/answer.md",
       "vars": [
         "ticketKey",
+        "platform",
         "questions"
       ]
     },
@@ -221,6 +225,7 @@
       "vars": [
         "ticketKey",
         "ticketTitle",
+        "platform",
         "kind",
         "text",
         "reason",
@@ -234,6 +239,7 @@
       "vars": [
         "ticketKey",
         "ticketTitle",
+        "platform",
         "card",
         "stops",
         "code",
@@ -259,6 +265,7 @@
       "file": "pm/change-ticket.md",
       "vars": [
         "projectName",
+        "platform",
         "summary",
         "requirements",
         "effortScore",
@@ -272,6 +279,7 @@
       "file": "pm/change-amend.md",
       "vars": [
         "projectName",
+        "platform",
         "summary",
         "tickets",
         "requirements",
@@ -351,6 +359,8 @@
       "file": "pm/wbs.md",
       "vars": [
         "projectName",
+        "platform",
+        "foundations",
         "features",
         "requirements",
         "screens",
@@ -396,6 +406,7 @@
       "file": "pm/wbs-detail.md",
       "vars": [
         "projectName",
+        "platform",
         "tickets",
         "otherTickets",
         "requirements",
@@ -409,6 +420,101 @@
     {
       "name": "pm/ac-library",
       "file": "pm/ac-library.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/ui",
+      "file": "pm/ac/ui.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/ui-web",
+      "file": "pm/ac/ui-web.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/ui-mobile",
+      "file": "pm/ac/ui-mobile.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/ui-desktop",
+      "file": "pm/ac/ui-desktop.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/list",
+      "file": "pm/ac/list.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/form",
+      "file": "pm/ac/form.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/wizard",
+      "file": "pm/ac/wizard.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/detail",
+      "file": "pm/ac/detail.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/board",
+      "file": "pm/ac/board.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/dashboard",
+      "file": "pm/ac/dashboard.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/auth",
+      "file": "pm/ac/auth.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/upload",
+      "file": "pm/ac/upload.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/settings",
+      "file": "pm/ac/settings.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/notification",
+      "file": "pm/ac/notification.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/job",
+      "file": "pm/ac/job.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/integration",
+      "file": "pm/ac/integration.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/cli",
+      "file": "pm/ac/cli.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/api",
+      "file": "pm/ac/api.md",
+      "vars": []
+    },
+    {
+      "name": "pm/ac/library",
+      "file": "pm/ac/library.md",
       "vars": []
     },
     {
@@ -483,7 +589,7 @@
         "projectName",
         "requirements",
         "decisions",
-        "formFactor",
+        "platform",
         "presets",
         "repos",
         "feedback",
@@ -501,6 +607,16 @@
         "design",
         "formFactor",
         "catalogue"
+      ]
+    },
+    {
+      "name": "pm/platform-infer",
+      "file": "pm/platform-infer.md",
+      "vars": [
+        "projectName",
+        "roles",
+        "knowledge",
+        "product"
       ]
     },
     {
@@ -537,6 +653,7 @@
         "base",
         "directionRule",
         "ask",
+        "surfaces",
         "featureSlugs",
         "roleSlugs",
         "rejected"
@@ -558,6 +675,29 @@
         "reference",
         "routes",
         "requirements",
+        "rejected"
+      ]
+    },
+    {
+      "name": "pm/prototype-design-surface",
+      "file": "pm/prototype-design-surface.md",
+      "vars": [
+        "designKit",
+        "designMethod",
+        "designRules",
+        "designSystem",
+        "projectName",
+        "surfaceName",
+        "surfaceId",
+        "formFactor",
+        "surfaceRoles",
+        "surfaces",
+        "brief",
+        "plan",
+        "featureSlugs",
+        "roleSlugs",
+        "rebuild",
+        "ask",
         "rejected"
       ]
     },

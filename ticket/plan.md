@@ -60,7 +60,7 @@ Call `plan_submit`:
 - summary: what will be built, the tier and why, in a few sentences.
 - effortScore: your final 0-100 score now that you have read the code (tiny < 20, small < 45, medium < 75, large).
 - tier: S, M or L.
-- architecture: howItWorks (the end-to-end flow in prose, which layer owns what, the failure path; 10 to 20 lines, at most 5 at tier S), screenLayout (naming each prototype route it implements, the shell included when it is this ticket's, and every place it departs from the prototype with why), schemaChanges, apiContract (real signatures and payload shapes, pasted), newLibs, each only when it applies, and reuse.
+- architecture: howItWorks (the end-to-end flow in prose, which layer owns what, the failure path; 10 to 20 lines, at most 5 at tier S), screenLayout (only for a screen the prototype does not show: its layout as B lays it out; a prototype screen is its own layout, so a ticket with prototype screens leaves screenLayout out and records each departure from the prototype as a decision), schemaChanges, apiContract (real signatures and payload shapes, pasted), newLibs, each only when it applies, and reuse.
 - decisions: every product and architecture choice the plan commits to, with a one-line rationale; `asked` when an answer settled it, `executive` when you decided on the client's behalf.
 - nonGoals: what is explicitly out of scope, so the build does not drift.
 - acProposals and acDisputes, when there are any.

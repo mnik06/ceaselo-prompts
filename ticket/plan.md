@@ -71,7 +71,7 @@ Call `plan_submit`:
 - acKinds: every criterion's id mapped to ui (seen on the product's screens, through the surface's drive the brief names), api (seen through the running app's API or command line) or code (seen in the diff).
 - expectedChangedLines: the lines you expect all bullets to change.
 - requires: the keys of the other tickets whose code the plan builds on and your base lacks; leave it out when there are none.
-- services: each approved service of the brief's "Approved stack" the plan uses, as `{repoId, service, need}` with the service's name as listed; need `deploy` when only deploying it uses the service, else `build`. A service whose secrets are not set yet makes the ticket wait for its credentials ticket with this plan kept, so never plan around a missing secret. A service the repo does not have is an executive decision, never an entry here.
+- secrets: each secret env key the plan needs, as `{projectRepoId, env}`: a key the brief's "Approved stack" lists under the repository's Secrets. A key not set yet makes the ticket wait for its credentials ticket with this plan kept, so never plan around a missing secret. A key the plan needs only to deploy that the contract does not list (a hosting or CI token) is named with `deployOnly: {howTo}`, one line saying where a person gets it; code then asks for it. Never name a local or placeholder key: the machine fills those. A provider the repository does not use is an executive decision, never an entry here.
 
 An invalid plan is answered with the reason: fix it and submit again. Stop once `plan_submit` is accepted. Never end the session without an accepted `plan_submit` or a `plan_ask`.{{projectInstructions}}
 

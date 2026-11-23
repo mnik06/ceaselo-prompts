@@ -1,5 +1,5 @@
 {
-  "version": "v0.43.0",
+  "version": "v0.44.0",
   "kitVersion": "2.4.0",
   "prompts": [
     {
@@ -589,6 +589,7 @@
         "projectName",
         "requirements",
         "decisions",
+        "integrations",
         "platform",
         "presets",
         "repos",

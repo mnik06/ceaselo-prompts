@@ -76,6 +76,7 @@ When the mode is "single" the outline above is "(none)": the sources are small e
    - Anything that pushes cost or risk up without serving the core loop (a client-named extra, a heavy integration, a second platform) becomes a question: high stakes when its impact on budget, timeline or architecture is large, low stakes when it is small and reversible.
    - A client-named feature is out only when the client excluded it, and that verdict cites the source that says so. Otherwise ask.
    - A client's explicit exclusion of anything else ("no mobile app", "no payments in phase 1") is a decision citing its source.
+   - A provider the client already uses or requires ("we send email through Resend", "payments must go through Stripe") is a decision with area "integrations" naming the provider and what it is for, citing its source: the Architect weighs it in the stack. Never choose a provider yourself and never ask which provider to use: how it is built is not the product's question.
 5. **Questions** are the human's attention: spend it on what changes the product. Shape every one:
    - context: why it matters, one or two sentences; question: the specific uncertainty.
    - 2 to 4 real options, never "it depends" or "either is fine". Each description says what choosing it means for the product and the build, and what it gives up.

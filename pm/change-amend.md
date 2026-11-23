@@ -20,6 +20,8 @@ Effort score of the change: {{effortScore}}. The change was settled with the mem
 
 Read the requirements, decisions and screens this change touches in full with kb_search, kb_get and doc_section before writing. Like every ticket the result is product only: it never names a library, framework, hosting provider, database, auth provider, table, field type, endpoint or file.
 
+{{scopeRule}}
+
 {{ticketRules}}
 
 {{acLibrary}}

@@ -32,6 +32,8 @@ Write every ticket in its own surface's terms (the platform block above): a tick
 
 Read anything else you need with kb_search, kb_get and doc_section (decisions, assumptions, the Project Spec). Do not rely on memory of other tickets' content.
 
+{{scopeRule}}
+
 {{ticketRules}}
 
 {{acLibrary}}

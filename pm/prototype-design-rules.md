@@ -20,7 +20,7 @@ The prototype is the UI source of truth: it must look like the shipped product, 
 - **Motion only answers an action** (a sheet opening, a row added, a save confirmed), with the motion tokens (`--dur`, `--dur-fast`, `--ease`); every transition off under `prefers-reduced-motion`.
 - **Running text within the measure** (`.measure`, `--measure`); figures in tables, stats and totals tabular (`.num`).
 - **At the phone width a wide table becomes a `.list`** or keeps its 2–3 key columns, never a sideways scroll.
-- **Charts by the data's shape**: a trend is a line (inline SVG on tokens), a comparison `.bars`, a part of a whole `.meter`; the accent marks the series the person acts on, the others muted.
+- **A chart only where a requirement asks for one**, drawn by the data's shape: a trend is a line (inline SVG on tokens), a comparison `.bars`, a part of a whole `.meter`; the accent marks the series the person acts on, the others muted. Data nobody asked to see as a chart is a table or a list, as the requirement words it.
 
 ### Never
 
@@ -30,5 +30,6 @@ The prototype is the UI source of truth: it must look like the shipped product, 
 - Entrance animations, or hover motion on every card.
 - A logo, brand mark or photo-like illustration: the logo slot is code's.
 - Names, companies or figures copied from the guide's examples.
+- An element no requirement, plan entry or ticket names: a chart, stat, summary, figure, illustration, banner, badge, filter, column, action or state added to make a screen look complete.
 - Fake charts made of boxes or characters: draw real proportions from the sample data (`.bars`, `.meter`, inline SVG on tokens), or show a table.
 - Styling the prototype chrome (`[data-prototype-controls]`, any `.pk-*` class), or restyling a vocabulary class into a different component.

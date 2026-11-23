@@ -4,6 +4,8 @@
 
 {{designRules}}
 
+{{scopeRule}}
+
 {{designSystem}}
 
 # Repair the refused answer for "{{projectName}}"

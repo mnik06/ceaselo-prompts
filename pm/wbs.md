@@ -47,6 +47,8 @@ The approved prototype: each screen's route, name, summary, and the features, ro
 
 **12 tickets or fewer:** write every ticket in full now: the skeleton fields plus `description` and `ac`, following the rules below. Read the requirement bodies with kb_get where they are not shown.
 
+{{scopeRule}}
+
 {{ticketRules}}
 
 {{acLibrary}}

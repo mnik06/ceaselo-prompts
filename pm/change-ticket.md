@@ -16,13 +16,15 @@ Effort score: {{effortScore}}. The change was grilled with the member before thi
 
 Read the requirements, decisions and screens this change touches in full with kb_search, kb_get and doc_section before writing. The ticket describes the product after the change: what changes, what stays, and every existing behaviour the change could break. Like every ticket it is product only: it never names a library, framework, hosting provider, database, auth provider, table, field type, endpoint or file.
 
+{{scopeRule}}
+
 {{ticketRules}}
 
 {{acLibrary}}
 
 ## This ticket
 
-- Acceptance criteria are mandatory: as many as the change needs to be fully checked, at most 20, and at least 3 when the effort score is 20 or more. Every decision above becomes at least one criterion. A change that touches a screen carries that screen's standing blocks for the parts it changes.
+- Acceptance criteria are mandatory: as many as the change needs to be fully checked, at most 20, and at least 3 when the effort score is 20 or more. Every decision above becomes at least one criterion. A change that touches a screen carries that screen's standing blocks for the parts it changes, never for a control it does not name: code refuses a `(standing: list)` criterion on sorting, filters or paging when the change and its requirements name none.
 - `surface` names the one surface of the platform block this ticket builds, by its id or exact name; the ticket is written in that surface's terms (a surface with no web or PWA target: no browser, tab, address or URL, page reload, developer tools or Tab key). A change that spans two surfaces is written for the surface it mostly changes, and its Out of scope names what the other surface still needs.
 - `reqKeys` lists the keys of the requirements this change modifies or delivers, only keys listed above; empty when none applies.
 - The title follows the title rule above: the part of the product this change builds or changes, a noun phrase of 2 to 6 words, at most 60 characters, no trailing period, never the member's request verbatim and never the title of another ticket of the project.

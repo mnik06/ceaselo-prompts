@@ -4,6 +4,8 @@
 
 {{designRules}}
 
+{{scopeRule}}
+
 {{designSystem}}
 
 # The prototype of "{{projectName}}"
@@ -38,7 +40,7 @@ Requirements these screens show (read any other with kb_get):
 - Show each role what the spec says it sees (data-only-roles, data-hide-roles).
 - Take every action label, toast, entity name and empty or error line from `APP_DATA.copy`; a word you need that it lacks follows its pattern.
 - Preview every state of every screen above at its viewports with `prototype_preview` (6 views per call) and judge each view as its user would: does it lead with the screen's one job; is there one primary action; does any state read as empty or broken; is there a generated-page tell (identical cards for everything, an all-caps label above every heading, middle-dot meta, an accented headline word, "→" on links); does anything clip, crowd or misalign at the phone width. Then remove one decoration that does not serve the screen. Fix, and re-preview what you changed; code refuses the answer if a view is missing. Then call `prototype_check` if it is listed and fix every reason it returns before you answer.
-- Any part of your brief that asks for a new field, rule, role or flow the spec does not have goes in `flags.json` instead of being built.
+- Build what the requirements, the screen's plan entry and its tickets name, nothing else. Anything beyond them, whether the brief asks for it (a new field, rule, role or flow the spec does not have) or you would add it (a chart, stat, summary, illustration, column, control, state or copy nothing names), goes in `flags.json`, one line each, instead of being built.
 - Answer with one short sentence once the files are written. Write exactly the routes above.{{rejected}}
 
 ## Progress

@@ -1,6 +1,6 @@
 {
-  "version": "v0.44.0",
-  "kitVersion": "2.4.0",
+  "version": "v0.45.0",
+  "kitVersion": "2.5.0",
   "prompts": [
     {
       "name": "system/echo",
@@ -8,6 +8,11 @@
       "vars": [
         "text"
       ]
+    },
+    {
+      "name": "system/scope-rule",
+      "file": "system/scope-rule.md",
+      "vars": []
     },
     {
       "name": "repo-distill",
@@ -78,7 +83,8 @@
         "brief",
         "round",
         "grillDepth",
-        "projectInstructions"
+        "projectInstructions",
+        "scopeRule"
       ]
     },
     {
@@ -100,7 +106,8 @@
         "selfReview",
         "prototype",
         "projectInstructions",
-        "surface"
+        "surface",
+        "scopeRule"
       ]
     },
     {
@@ -117,7 +124,9 @@
         "browserNote",
         "prototype",
         "repos",
-        "projectInstructions"
+        "projectInstructions",
+        "scopeRule",
+        "unaskedSeverity"
       ]
     },
     {
@@ -131,7 +140,9 @@
         "changes",
         "diffBases",
         "repos",
-        "projectInstructions"
+        "projectInstructions",
+        "scopeRule",
+        "unaskedSeverity"
       ]
     },
     {
@@ -148,7 +159,8 @@
         "repos",
         "brief",
         "loopRules",
-        "projectInstructions"
+        "projectInstructions",
+        "scopeRule"
       ]
     },
     {
@@ -246,7 +258,8 @@
         "messages",
         "ticketRules",
         "acLibrary",
-        "rejected"
+        "rejected",
+        "scopeRule"
       ]
     },
     {
@@ -257,7 +270,8 @@
         "product",
         "features",
         "requirements",
-        "note"
+        "note",
+        "scopeRule"
       ]
     },
     {
@@ -271,7 +285,8 @@
         "effortScore",
         "ticketRules",
         "acLibrary",
-        "rejected"
+        "rejected",
+        "scopeRule"
       ]
     },
     {
@@ -286,7 +301,8 @@
         "effortScore",
         "ticketRules",
         "acLibrary",
-        "rejected"
+        "rejected",
+        "scopeRule"
       ]
     },
     {
@@ -369,7 +385,8 @@
         "billableCapacityHours",
         "ticketRules",
         "acLibrary",
-        "rejected"
+        "rejected",
+        "scopeRule"
       ]
     },
     {
@@ -414,7 +431,8 @@
         "note",
         "ticketRules",
         "acLibrary",
-        "rejected"
+        "rejected",
+        "scopeRule"
       ]
     },
     {
@@ -626,6 +644,11 @@
       "vars": []
     },
     {
+      "name": "pm/prototype-design-app",
+      "file": "pm/prototype-design-app.md",
+      "vars": []
+    },
+    {
       "name": "pm/prototype-design-method",
       "file": "pm/prototype-design-method.md",
       "vars": []
@@ -657,7 +680,31 @@
         "surfaces",
         "featureSlugs",
         "roleSlugs",
-        "rejected"
+        "rejected",
+        "scopeRule"
+      ]
+    },
+    {
+      "name": "pm/prototype-design-plan",
+      "file": "pm/prototype-design-plan.md",
+      "vars": [
+        "designKit",
+        "designMethod",
+        "designRules",
+        "designSystem",
+        "projectName",
+        "specSections",
+        "spec",
+        "roles",
+        "scope",
+        "decisions",
+        "base",
+        "ask",
+        "directionRule",
+        "featureSlugs",
+        "roleSlugs",
+        "rejected",
+        "scopeRule"
       ]
     },
     {
@@ -676,7 +723,8 @@
         "reference",
         "routes",
         "requirements",
-        "rejected"
+        "rejected",
+        "scopeRule"
       ]
     },
     {
@@ -699,7 +747,8 @@
         "roleSlugs",
         "rebuild",
         "ask",
-        "rejected"
+        "rejected",
+        "scopeRule"
       ]
     },
     {
@@ -720,7 +769,8 @@
         "designTarget",
         "notes",
         "requirements",
-        "rejected"
+        "rejected",
+        "scopeRule"
       ]
     },
     {
@@ -740,7 +790,8 @@
         "featureSlugs",
         "roleSlugs",
         "ticketKeys",
-        "rejected"
+        "rejected",
+        "scopeRule"
       ]
     },
     {
@@ -753,7 +804,16 @@
         "designSystem",
         "projectName",
         "target",
-        "reasons"
+        "reasons",
+        "scopeRule"
+      ]
+    },
+    {
+      "name": "pm/app-snapshot",
+      "file": "pm/app-snapshot.md",
+      "vars": [
+        "repo",
+        "routes"
       ]
     }
   ]

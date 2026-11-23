@@ -20,13 +20,13 @@ The prototype is built on one curated design system the human chose, with their 
 | `data.js` | One script defining `window.APP_DATA`. |
 | `plan.json` | The screen plan, a JSON array. |
 | `screens/<route>.html` | One screen's content; `orders/detail` is `screens/orders/detail.html`. |
-| `flags.json` | Optional: asks that are requirement changes, a JSON array of strings. |
+| `flags.json` | Optional: what you did not build because no requirement, ticket or criterion names it (an ask that changes the requirements, an addition you or the brief thought of), one line each, a JSON array of strings. |
 
 Edit files in place with Edit; never paste a whole file into your answer. Your final answer is one short sentence: code reads the files.
 
 ### Your own CSS: tokens only
 
-A screen (and the shell) may carry one `<style>` block of at most 8 KB; code scopes a screen's to that screen. It may set any property, but every colour, font family, font size, radius, shadow and spacing value is a `var(--…)` token of the system (`calc()` over tokens is fine; `0`, `auto`, percentages for layout and unitless numbers pass). The same holds for `style` attributes; `style="--value:62%"` sizes a `.meter` or `.bars__bar`. Inline SVG illustration is welcome when it paints with `currentColor` or `var(--…)` only.
+A screen (and the shell) may carry one `<style>` block of at most 8 KB; code scopes a screen's to that screen. It may set any property, but every colour, font family, font size, radius, shadow and spacing value is a `var(--…)` token of the system (`calc()` over tokens is fine; `0`, `auto`, percentages for layout and unitless numbers pass). The same holds for `style` attributes; `style="--value:62%"` sizes a `.meter` or `.bars__bar`. Inline SVG (an icon the library lacks, a chart a requirement asks for) paints with `currentColor` or `var(--…)` only.
 
 ### The shell and the screens
 

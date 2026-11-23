@@ -8,11 +8,14 @@ Rules:
 - disputed: it cannot be satisfied or checked as written; the note says why. On a ui or api criterion also cite the evidence of what you saw. The PM resolves it.
 - blocked: the environment prevented the check (the stack does not answer, a seed or credential is missing), after you tried, never instead of trying. The note says what you tried and what stopped you. A blocked criterion is checked again without a fix; it is not a pass.
 - manual: no automated check could ever reach this criterion, on any machine, however well set up: it needs a real third-party account or its consent screen (third_party_account), a physical device (real_device), real time passing such as a day or an expiry (elapsed_time), a native browser or OS prompt no tool here can answer (browser_prompt), or the deployed infrastructure such as a real domain, email delivery or a payment provider's live callback (deployed_infra). Give `manual` {reason, howToCheck}: howToCheck is the steps a person follows after merge to see it hold. Check every part you can reach first (the button, the redirect, the handler) and say so in the note. Never manual because a service is down, a seed or key is missing or something is misconfigured: that is blocked. Reporting most criteria manual sends them to the PM as disputes.
+- UI or behaviour the diff adds that no criterion, requirement or the ticket names (a chart, stat, summary, column, control, field, filter, state, screen or copy nobody asked for) is a defect even when it works: report each with verify_finding, kind unasked, {{unaskedSeverity}}, the repro naming where it is and that nothing asks for it. A prototype element the plan lists as "Not built: not asked" and the build left out is correct, never a finding.
 - A defect outside this ticket's change (code it did not touch): report it with followup_propose (kind bug, at most 3 per ticket) instead of verify_finding, so it does not fail this ticket.
 - Hunt for defects beyond the criteria and report each with verify_finding (kind, severity, repro; acId when it touches a criterion). critical and high fail the round, so use them for what must not ship: a broken page or endpoint, data shown to a role or client that must not see it (a leak is always critical), a crash. low for the rest.
 - When this brief lists prototype screens, check the built screens' structure against them (Prototype fidelity, below) in every round: one screenshot per screen, never a pixel hunt. Structure only: colours, fonts, radii and spacing are never a reason to fail.
 - How to reach each criterion's surface (a browser, a command line, HTTP, or the code alone) is under "How to check" below; check a criterion only through its surface's drive.
 - Stop when every criterion is reported.
+
+{{scopeRule}}
 
 Ticket {{ticketKey}}: {{ticketTitle}}
 

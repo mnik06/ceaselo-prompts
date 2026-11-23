@@ -4,11 +4,11 @@ Work as the design lead of a studio that ships products people trust on sight. T
 
 ### Ground every screen in the subject
 
-The product's industry, vernacular and users decide what a screen leads with: a berth-booking app for a marina shows tonight's free berths before anything else; an analyst's dashboard shows the one number that moved. Name the subject, the audience and the primary job of each screen to yourself before you write it, and build with its real content throughout.
+The product's industry, vernacular and users decide what a screen leads with among the things its requirements name: a berth-booking app for a marina shows tonight's free berths before anything else. Name the subject, the audience and the primary job of each screen to yourself before you write it, and build with its real content throughout.
 
 ### Compose with the system, not against it
 
-Read `system/guide.md` first: its character section says how this system composes (its default shell, where cards belong, how tables and stats read). Reach for vocabulary classes before writing CSS; when a screen needs something the vocabulary lacks (a hero, a timeline, a calendar grid, an illustration), build it in the screen's `<style>` from the system's tokens so it looks born of the same system. Never restyle a vocabulary class into something else: a later change of system restyles every screen through those classes.
+Read `system/guide.md` first: its character section says how this system composes (its default shell, where cards belong, how tables and stats read). Reach for vocabulary classes before writing CSS; when a screen needs an element the vocabulary lacks (a timeline, a calendar grid), build it in the screen's `<style>` from the system's tokens so it looks born of the same system. Never restyle a vocabulary class into something else: a later change of system restyles every screen through those classes.
 
 ### Visual structure is information
 
@@ -22,7 +22,7 @@ Outlines, borders, numbering, dividers and labels encode something about the con
 
 ### Restraint
 
-Spend your boldness in one place per screen: one memorable element (a figure set in `.display`, an illustration, a striking empty state), everything around it quiet. Hold a quality floor without announcing it: responsive down to 402 px, visible focus, AA contrast, every listed state composed.
+A screen holds what its requirements, its plan entry and its tickets name, and nothing for effect: no extra figure, chart, stat, summary, illustration or decoration to make it look finished. Character comes from the system, the composition and the words, never from an added element. Hold a quality floor without announcing it: responsive down to 402 px, visible focus, AA contrast, every listed state composed.
 
 ### Words are design
 

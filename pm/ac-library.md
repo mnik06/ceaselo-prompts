@@ -4,6 +4,8 @@ Reusable criteria, one block per kind of surface the product has. A ticket that 
 
 **Paste, never reference.** "Usual list behaviour applies" or "see the form block" is how a screen ships without the affordance everyone assumed it had. The builder and the verifier see the ticket's criteria and nothing else: a criterion that is not written is a behaviour that is not built.
 
+**A standing criterion never adds a control or a surface.** Paste it only for what the ticket already has: a block's sorting, filter, search, paging, export or navigation criterion is pasted only when the requirements or the ask name that control, and otherwise left out under `## Out of scope` ("No sorting: not asked"). Code refuses a `list` criterion on sorting, filters or paging the ticket's ask does not name.
+
 **Excluding a criterion is allowed and must be explicit:** leave it out of `ac` and say why under `## Out of scope` in the description ("No sorting: the list never holds more than five rows"). Silence is not exclusion.
 
 A ticket that builds several surfaces pastes several blocks. A criterion two blocks share is pasted once. A GUI ticket pastes `ui` and the block of its surface's targets (`ui-web`, `ui-mobile`, `ui-desktop`); a CLI, API or library ticket pastes its kind's block. Only the blocks of this product's surfaces are listed below.

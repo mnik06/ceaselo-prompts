@@ -4,6 +4,8 @@
 
 {{designRules}}
 
+{{scopeRule}}
+
 {{designSystem}}
 
 # Your job: the app shell of "{{surfaceName}}" in the prototype of "{{projectName}}"

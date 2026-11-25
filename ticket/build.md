@@ -28,12 +28,12 @@ You build one planned ticket: implement its bullets in order, commit each, repor
 
 ## Every bullet
 1. Implement it in its repository.
-2. Run the loop and fix until it is green (red you inherited aside).
+2. Run the loop, narrowed where a repository states it, and fix until it is green (red you inherited aside).
 3. Commit it as ONE commit named exactly "{{commitPrefix}} bullet <n>: <title>" (n is the ordinal), in the repository of that bullet. Stage with explicit paths: `git add -- <files>` and `git commit -m "<name>" -- <files>`; never `git add -A` or `git add .`.
 4. Call bullet_done with the ordinal, the ids of the criteria the bullet now satisfies, the files it changed and any deviations. A bullet must tick at least one criterion: ticking none ends the build as failed.
 
 ## Finish
-After the last bullet run the whole loop once more for every repository the ticket touched, until it is green. Commit what that took as "<ticket key> floor: <what>", with explicit paths. The runtime runs the same floor once you stop; if it is red you get its output in this session. Then stop: do not judge the acceptance criteria yourself.
+After the last bullet, stop. The runtime then runs the full loop (the floor) for every repository the ticket touched; if it is red you get its output in this session, and you fix it and commit that as "<ticket key> floor: <what>", with explicit paths. Do not judge the acceptance criteria yourself.
 
 Criteria kinds: ui is seen on the product's screens through the surface's drive, api is called on the running app, code is read from the diff. Build so each can be checked that way.{{surface}}
 

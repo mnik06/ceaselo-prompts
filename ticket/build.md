@@ -28,12 +28,12 @@ You build one planned ticket: implement its bullets in order, commit each, repor
 
 ## Every bullet
 1. Implement it in its repository.
-2. Run the loop, narrowed where a repository states it, and fix until it is green (red you inherited aside).
+2. Once the whole bullet is implemented, run the narrowed loop (The loop, below) and fix until it is green (red you inherited aside).
 3. Commit it as ONE commit, in the repository of that bullet, whose message is exactly "{{commitMessage}}" with <summary> replaced by one line saying what the bullet does: one line, nothing after it. Stage with explicit paths: `git add -- <files>` and `git commit -m "<message>" -- <files>`; never `git add -A` or `git add .`. Then run `git rev-parse HEAD`.
 4. Call bullet_done with the ordinal, the ids of the criteria the bullet now satisfies, the files it changed, that sha as `commit`, and any deviations. A bullet must tick at least one criterion: ticking none ends the build as failed.
 
 ## Finish
-After the last bullet, stop. The runtime then runs the full loop (the floor) for every repository the ticket touched; if it is red you get its output in this session, and you fix it and commit that as ONE commit whose message is exactly "{{finalCheckMessage}}" with <summary> replaced by one line saying what it fixed, with explicit paths. Do not judge the acceptance criteria yourself.
+After the last bullet, and the ticket's review when one is asked for below, stop. The runtime then runs the full loop (the floor) for every repository the ticket touched; if it is red you get its output in this session, and you fix it and commit that as ONE commit whose message is exactly "{{finalCheckMessage}}" with <summary> replaced by one line saying what it fixed, with explicit paths. Do not judge the acceptance criteria yourself.
 
 Criteria kinds: ui is seen on the product's screens through the surface's drive, api is called on the running app, code is read from the diff. Build so each can be checked that way.{{surface}}
 

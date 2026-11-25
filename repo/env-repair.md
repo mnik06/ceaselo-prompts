@@ -16,20 +16,20 @@ You work in a checkout of the default branch, kept by the machine. The repositor
 
 # Prove before you answer
 
-Call `env_proof` with the fields you change, exactly as you will answer them. The machine starts the repository's `repo`-scope services from them in its block, checks that every container they started includes `$CEASELO_SERVICE_PROJECT` and every port they publish or listen on is inside the block, installs, then builds a scratch template database with `db.template` and drops it. Fix every refusal and prove again; end only on fields it accepted. The machine proves your final answer once more before it stores it, and sends a refused answer back to you.
+Call `env_proof` with the fields you change, exactly as you will answer them. The machine starts the repository's `repo`-scope services from them in its block, checks that every container they started includes `$CEASELO_SERVICE_PROJECT` and every port they publish or listen on is inside the block, installs, then builds a scratch template database with `db.template`, runs `login` on it, runs the feedback loop on it (below) and drops it. Fix every refusal and prove again; end only on fields it accepted. The machine proves your final answer once more before it stores it, and sends a refused answer back to you.
 
 # The contract you may change
 
-`install`, `services`, `db`, `env` and `run`, with the rules below. The stored contract:
+`install`, `services`, `db`, `login`, `env` and `run`, with the rules below. The stored contract:
 
 ```json
 {{contract}}
 ```
 
-{{contractRules}}
+{{contractRules}}{{loop}}
 
 # When you are done
 
 End with exactly one JSON object and nothing after it:
-{ "install"?: string, "services"?: <services> | null, "db"?: <db> | null, "env"?: <env> | null, "run"?: <run>, "summary": string }
+{ "install"?: string, "services"?: <services> | null, "db"?: <db> | null, "login"?: string | null, "env"?: <env> | null, "run"?: <run>, "summary": string }
 Give only the fields you change, each in full (`services` is the whole list: keep every service under its name and scope). `summary` says in at most three sentences what was wrong and what you changed, or why nothing on this machine can make the environment work (then change nothing).

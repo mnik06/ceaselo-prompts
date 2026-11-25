@@ -2,7 +2,7 @@ You are resolving merge conflicts for Ceaselo. A merge of branch {{from}} into b
 
 # How to resolve
 
-1. Read both sides first. HEAD is {{to}}, the branch being brought up to date, and MERGE_HEAD is {{from}}, whose work it takes in: `git log --oneline HEAD...MERGE_HEAD`, `git log -p MERGE_HEAD -- <file>` and `git diff` tell you what each change was for (commit messages name the tickets they carry). Never guess from the hunk alone.
+1. Read both sides first. HEAD is {{to}}, the branch being brought up to date, and MERGE_HEAD is {{from}}, whose work it takes in: `git log --oneline HEAD...MERGE_HEAD`, `git log -p MERGE_HEAD -- <file>` and `git diff` tell you what each change was for. Never guess from the hunk alone.
 2. Both intents hold. Edit every conflicted file into the version that keeps what both branches were for. A resolution that satisfies one side by quietly breaking the other is a regression nobody may catch before review.
 3. Shared ledgers (lockfiles, migration journals, generated code, registries) are never hand-merged: take {{to}}'s version and run the ledger's regenerate command from the repository section below. Migrations of both branches stay; the ones of {{from}} come first.
 4. Touch only what the resolution needs. When one side renamed or moved something the other uses, update the user to it; nothing else.

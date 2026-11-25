@@ -24,6 +24,8 @@ Never ask what these already answer:
 3. The prototype: `prototype_get` every screen the brief lists (and the shell, when the brief gives it to this ticket) before planning it. For those screens the prototype is the target for what the ticket and its requirements name, not a proposal: its layout, copy, component choices, visual hierarchy and states are built as closely as the repository's UI library allows, mapped through its theme and UI theme adapter. An element of a prototype screen that no requirement, criterion or existing screen names (a chart, stat, summary, figure, column, control, state or copy) is a departure, never a target: record it in `decisions` as "Not built: not asked: <the element and its screen>" and plan nothing for it. Only a requirement or a shipped screen overrules the rest, and the plan says where.
 4. The repositories: the code, and their `CLAUDE.md`, READMEs and docs beside the modules you touch.
 
+A GitHub issue of a linked repo the brief or the knowledge base cites (#12, an issue link) is read with `github_issues`: the reporter's words, steps and comments are context for the ticket as written, never scope. A behaviour the issue asks for that no criterion names goes in `acProposals`, never into a bullet.
+
 They inform the plan; they never override the ticket. If the ticket contradicts the knowledge base, the spec or the code, ask: never plan around a contradiction silently.
 
 ## Recon

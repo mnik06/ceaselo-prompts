@@ -1,5 +1,5 @@
 {
-  "version": "v0.58.0",
+  "version": "v0.59.0",
   "kitVersion": "2.5.0",
   "prompts": [
     {
@@ -101,7 +101,8 @@
         "branch",
         "bullets",
         "parallelNote",
-        "commitPrefix",
+        "commitMessage",
+        "finalCheckMessage",
         "planDesign",
         "loopRules",
         "selfReview",
@@ -153,6 +154,7 @@
         "ticketKey",
         "ticketTitle",
         "round",
+        "commitMessage",
         "attempts",
         "multiRepoNote",
         "branch",

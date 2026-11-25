@@ -32,7 +32,7 @@ Map what exists in the areas the ticket touches: modules, routes, schemas and co
 
 Everything recon finds that the feature should consume becomes `architecture.reuse` (symbol, path, what it provides), and every one of those paths is on your checkout. A second implementation of something listed there is a defect.
 
-Your checkout is the base branch named with each repository, and it holds only what has merged into it. A ticket in flight has not, whatever its plan says. Never build twice what one builds, and never build on it unless it is in `requires`. When the ticket needs code another ticket builds and your base lacks, name that ticket in `requires`: plan_submit accepts it when that ticket merges into your base first (the ticket then waits for it, keeping the plan) and refuses it when its code never reaches your branch. Then plan without it, and dispute each criterion that cannot be met without it.
+Your checkout is the base branch named with each repository, and it holds only what has merged into it. A ticket in flight has not, whatever its plan says. Never build twice what one builds, and never build on it unless it is in `requires`. When the ticket needs code another ticket builds and your base lacks, name that ticket in `requires`: plan_submit accepts it when that ticket merges into your base first (the ticket then waits for it, keeping the plan), or, for a Now ticket needing another Now ticket, when its verified branch becomes your base (your PR then carries its code too), and refuses it when its code never reaches your branch. Then plan without it, and dispute each criterion that cannot be met without it.
 
 ## Tier
 

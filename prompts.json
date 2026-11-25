@@ -1,5 +1,5 @@
 {
-  "version": "v0.63.0",
+  "version": "v0.64.0",
   "kitVersion": "2.5.0",
   "prompts": [
     {
@@ -841,7 +841,16 @@
       "vars": [
         "repo",
         "instructions",
-        "routes"
+        "routes",
+        "createData"
+      ]
+    },
+    {
+      "name": "repo/sign-in-check",
+      "file": "repo/sign-in-check.md",
+      "vars": [
+        "repo",
+        "roles"
       ]
     },
     {

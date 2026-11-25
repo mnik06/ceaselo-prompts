@@ -31,5 +31,5 @@ Call `env_proof` with the fields you change, exactly as you will answer them. Th
 # When you are done
 
 End with exactly one JSON object and nothing after it:
-{ "install"?: string, "services"?: <services> | null, "db"?: <db> | null, "login"?: string | null, "env"?: <env> | null, "run"?: <run>, "summary": string }
+{ "install"?: string, "services"?: <services> | null, "db"?: <db> | null, "login"?: <login>, "env"?: <env> | null, "run"?: <run>, "summary": string }
 Give only the fields you change, each in full (`services` is the whole list: keep every service under its name and scope). `summary` says in at most three sentences what was wrong and what you changed, or why nothing on this machine can make the environment work (then change nothing).

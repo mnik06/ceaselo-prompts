@@ -1,5 +1,5 @@
 {
-  "version": "v0.55.0",
+  "version": "v0.56.0",
   "kitVersion": "2.5.0",
   "prompts": [
     {
@@ -662,6 +662,11 @@
       "vars": []
     },
     {
+      "name": "pm/prototype-design-source",
+      "file": "pm/prototype-design-source.md",
+      "vars": []
+    },
+    {
       "name": "pm/prototype-design-method",
       "file": "pm/prototype-design-method.md",
       "vars": []
@@ -679,6 +684,7 @@
         "designMethod",
         "designRules",
         "designSystem",
+        "sourcePack",
         "projectName",
         "specSections",
         "spec",
@@ -705,6 +711,7 @@
         "designMethod",
         "designRules",
         "designSystem",
+        "sourcePack",
         "projectName",
         "specSections",
         "spec",
@@ -728,6 +735,7 @@
         "designMethod",
         "designRules",
         "designSystem",
+        "sourcePack",
         "projectName",
         "brief",
         "shell",
@@ -772,6 +780,7 @@
         "designMethod",
         "designRules",
         "designSystem",
+        "sourcePack",
         "projectName",
         "brief",
         "shell",
@@ -794,6 +803,7 @@
         "designMethod",
         "designRules",
         "designSystem",
+        "sourcePack",
         "projectName",
         "brief",
         "shell",
@@ -815,6 +825,7 @@
         "designMethod",
         "designRules",
         "designSystem",
+        "sourcePack",
         "projectName",
         "target",
         "reasons",
@@ -827,6 +838,14 @@
       "vars": [
         "repo",
         "routes"
+      ]
+    },
+    {
+      "name": "pm/source-pack",
+      "file": "pm/source-pack.md",
+      "vars": [
+        "repo",
+        "rejected"
       ]
     }
   ]

@@ -44,4 +44,4 @@ Write the attributes; code's runtime does the rest.
 
 ### Previews
 
-`prototype_preview` renders your screens in the app's frame with the app's stylesheets (its fonts are left out of the workspace, so text shows in a fallback face) and returns the captured page each screen is built on beside the render: outside your `data-change` parts the default state must look like it.
+`prototype_preview` renders your screens in the app's frame with the app's stylesheets (its fonts are left out of the workspace, so text shows in a fallback face) and returns the captured page each screen is built on beside the render: outside your `data-change` parts the default state must look like it. Before you answer, clear the match check: no `match_kit` finding from `prototype_check` (use the app's own component the finding names instead of the kit's), and every screen on a captured page with 1% or less of its pixels differing from the app's page in `prototype_preview` (fix what differs from the captured page outside your `data-change` parts).

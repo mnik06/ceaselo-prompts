@@ -8,6 +8,8 @@
 
 {{designSystem}}
 
+{{sourcePack}}
+
 # Your job: frame the prototype of "{{projectName}}"
 
 You are the first stage of building a clickable prototype. It is the client's first look at the product and, once approved, the UI source of truth the tickets are built from: every in-scope feature, every role and every state the spec describes must be on screen, and it must look like the shipped product. The design system and the form factor above are fixed (the Project Spec settled the form factor); you decide the voice, and write the app shell, the sample data and the screen plan. You write no screen: parallel sessions write every screen from your plan, shell, data and the system's guide right after you.

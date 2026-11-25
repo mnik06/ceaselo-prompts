@@ -8,6 +8,8 @@
 
 {{designSystem}}
 
+{{sourcePack}}
+
 # Revise the prototype of "{{projectName}}"
 
 Code assembles one offline HTML file from the design system, the app shell, the sample data and every screen of the plan. A member of the project asked for changes; you edit only the part named below, in your workspace. Everything else is copied unchanged into the next version.

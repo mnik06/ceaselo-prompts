@@ -8,6 +8,8 @@
 
 {{designSystem}}
 
+{{sourcePack}}
+
 # The prototype of "{{projectName}}"
 
 Code assembles one offline HTML file from the design system, the app shell, the sample data and every screen of the plan. They are fixed and are in your workspace; you write screens.
@@ -39,7 +41,7 @@ Requirements these screens show (read any other with kb_get):
 - Forms show their validation: required fields, formats and limits from the spec, field-level errors with real copy (aria-invalid).
 - Show each role what the spec says it sees (data-only-roles, data-hide-roles).
 - Take every action label, toast, entity name and empty or error line from `APP_DATA.copy`; a word you need that it lacks follows its pattern.
-- Preview every state of every screen above at its viewports with `prototype_preview` (6 views per call) and judge each view as its user would: does it lead with the screen's one job; is there one primary action; does any state read as empty or broken; is there a generated-page tell (identical cards for everything, an all-caps label above every heading, middle-dot meta, an accented headline word, "→" on links); does anything clip, crowd or misalign at the phone width. Then remove one decoration that does not serve the screen. Fix, and re-preview what you changed; code refuses the answer if a view is missing. Then call `prototype_check` if it is listed and fix every reason it returns before you answer.
+- Preview every state of every screen above at its viewports with `prototype_preview` (6 views per call) and judge each view as its user would: does it lead with the screen's one job; is there one primary action; does any state read as empty or broken; is there a generated-page tell (identical cards for everything, an all-caps label above every heading, middle-dot meta, an accented headline word, "→" on links); does anything clip, crowd or misalign at the phone width. Then remove one decoration that does not serve the screen. Fix, and re-preview what you changed; code refuses the answer if a view is missing. Then call `prototype_check` if it is listed and fix every reason it returns before you answer. Clear the match check too before you answer: no `match_kit` finding from `prototype_check` (use the app's own component the finding names instead of the kit's), and every copied page (a screen built on a captured app page) with 1% or less of its pixels differing from the app's page in `prototype_preview` (fix what differs from the captured page outside the parts the screen adds).
 - Build what the requirements, the screen's plan entry and its tickets name, nothing else. Anything beyond them, whether the brief asks for it (a new field, rule, role or flow the spec does not have) or you would add it (a chart, stat, summary, illustration, column, control, state or copy nothing names), goes in `flags.json`, one line each, instead of being built.
 - Answer with one short sentence once the files are written. Write exactly the routes above.{{rejected}}
 

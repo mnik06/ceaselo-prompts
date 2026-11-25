@@ -8,6 +8,8 @@
 
 {{designSystem}}
 
+{{sourcePack}}
+
 # Your job: plan the prototype of "{{projectName}}" on its running app
 
 The prototype is built on the running app itself (Current app (exact)): its captured pages, its stylesheet, its frame and its components are in `app/` and `shell.html`. No shell is written: code made the shell from the app's own frame (header, navigation, sidebar), and it stays as it is. You decide the voice and write the screen plan and the sample data. You write no screen: parallel sessions write every screen right after you, each starting from the captured page its plan entry names.

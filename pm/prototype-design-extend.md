@@ -8,6 +8,8 @@
 
 {{designSystem}}
 
+{{sourcePack}}
+
 # Extend the prototype of "{{projectName}}"
 
 The project has one prototype, updated in place. Someone asked for a feature or ticket to be shown in it. You add the screens the ask needs and edit the screens it touches, in your workspace; code copies every other screen and the shell unchanged. Code assembles one offline HTML file from the design system, the app shell, the sample data and every screen of the plan.

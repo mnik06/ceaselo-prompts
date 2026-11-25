@@ -1,5 +1,5 @@
 {
-  "version": "v0.59.0",
+  "version": "v0.60.0",
   "kitVersion": "2.5.0",
   "prompts": [
     {
@@ -839,6 +839,7 @@
       "file": "pm/app-snapshot.md",
       "vars": [
         "repo",
+        "instructions",
         "routes"
       ]
     },

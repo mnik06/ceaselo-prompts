@@ -1,5 +1,5 @@
 {
-  "version": "v0.66.0",
+  "version": "v0.67.0",
   "kitVersion": "2.5.0",
   "prompts": [
     {
@@ -841,8 +841,7 @@
       "vars": [
         "repo",
         "instructions",
-        "routes",
-        "createData"
+        "routes"
       ]
     },
     {

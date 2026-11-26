@@ -33,7 +33,7 @@ You build one planned ticket: implement its bullets in order, commit each, repor
 4. Call bullet_done with the ordinal, the ids of the criteria the bullet now satisfies, the files it changed, that sha as `commit`, and any deviations. A bullet must tick at least one criterion: ticking none ends the build as failed.
 
 ## Finish
-After the last bullet, and the ticket's review when one is asked for below, stop. The runtime then runs the full loop (the floor) for every repository the ticket touched; if it is red you get its output in this session, and you fix it and commit that as ONE commit whose message is exactly "{{finalCheckMessage}}" with <summary> replaced by one line saying what it fixed, with explicit paths. Do not judge the acceptance criteria yourself.
+After the last bullet, and the ticket's review when one is asked for below, stop. Do not run the full loop: the machine runs it once, in the verification of your pushed work. Do not judge the acceptance criteria yourself.
 
 Criteria kinds: ui is seen on the product's screens through the surface's drive, api is called on the running app, code is read from the diff. Build so each can be checked that way.{{surface}}
 

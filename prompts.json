@@ -1,5 +1,5 @@
 {
-  "version": "v0.68.0",
+  "version": "v0.69.0",
   "kitVersion": "2.5.0",
   "prompts": [
     {
@@ -102,7 +102,6 @@
         "bullets",
         "parallelNote",
         "commitMessage",
-        "finalCheckMessage",
         "planDesign",
         "loopRules",
         "selfReview",

@@ -1,5 +1,5 @@
 {
-  "version": "v0.79.0",
+  "version": "v0.81.0",
   "kitVersion": "2.6.0",
   "prompts": [
     {
@@ -54,6 +54,7 @@
       "file": "repo/instructions-loop.md",
       "vars": [
         "instructions",
+        "author",
         "buildFiles"
       ]
     },
@@ -153,6 +154,25 @@
     {
       "name": "ticket-fix",
       "file": "ticket/fix.md",
+      "vars": [
+        "ticketKey",
+        "ticketTitle",
+        "round",
+        "commitMessage",
+        "attempts",
+        "multiRepoNote",
+        "branch",
+        "acs",
+        "repos",
+        "brief",
+        "loopRules",
+        "projectInstructions",
+        "scopeRule"
+      ]
+    },
+    {
+      "name": "ticket-fixer",
+      "file": "ticket/fixer.md",
       "vars": [
         "ticketKey",
         "ticketTitle",

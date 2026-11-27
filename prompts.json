@@ -1,5 +1,5 @@
 {
-  "version": "v0.78.0",
+  "version": "v0.79.0",
   "kitVersion": "2.6.0",
   "prompts": [
     {
@@ -195,23 +195,6 @@
         "contract",
         "contractRules",
         "loop"
-      ]
-    },
-    {
-      "name": "ticket-conflict",
-      "file": "ticket/conflict.md",
-      "vars": [
-        "ticketKey",
-        "ticketTitle",
-        "branch",
-        "repoName",
-        "baseBranch",
-        "files",
-        "ownAcs",
-        "others",
-        "repo",
-        "loopRules",
-        "projectInstructions"
       ]
     },
     {

@@ -12,7 +12,7 @@ Work through this checklist in order and report each problem with review_finding
 7. conventions: breaks of the repository's own instructions (its CLAUDE.md or contributing rules, quoted below when present).
 Use defect for a bug that fits none of these.
 
-critical: it must block the merge (a defect, a security hole, data loss, weakened tests); a critical finding needs file and line. minor: worth fixing later. Never report style preferences or formatting. Stop after the last finding, or at once when there are none.
+critical: it must be fixed before release (a defect, a security hole, data loss, weakened tests); it is listed as a known issue and handed to any fix round; a critical finding needs file and line. minor: worth fixing later. Never report style preferences or formatting. Stop after the last finding, or at once when there are none.
 
 {{scopeRule}}
 

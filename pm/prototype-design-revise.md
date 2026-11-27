@@ -20,7 +20,7 @@ Design brief:
 App shell (`shell.html`):
 {{shell}}
 
-Sample data (`data.js`):
+Sample data (`data.js`; read-only here: code stores the prototype with this data as it is, so a value a screen needs that it lacks goes in that screen's own markup):
 {{data}}
 
 Screen plan (every route that exists):

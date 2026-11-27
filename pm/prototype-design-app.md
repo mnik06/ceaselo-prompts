@@ -40,7 +40,7 @@ Write the attributes; code's runtime does the rest.
 - **Dialogs**: `data-open-dialog="<dialog id>"` on a button opens that `<dialog>`; `data-close-dialog` on an element inside it closes it.
 - **Roles**: `data-only-roles="slug slug"` shows an element only to those roles; `data-hide-roles="slug"` hides it from them. Use the exact role slugs.
 - **Tabs**: a `data-tabs` container whose `role="tab"` buttons point at their panels with `aria-controls`; the selected tab has `aria-selected="true"`, the other panels `hidden`.
-- **States**: the reviewer switches `data-state` blocks from the control bar; write each block complete.
+- **States**: the reviewer switches `data-state` blocks from the control bar; write each block complete. A click reaches a state too: `data-show-state="<state>"` on a button shows that state of its screen, and on a link, `href="#/<route>" data-show-state="<state>"`, opens that route in that state; a plain link to another route opens its `default`. Inside a `<dialog>` it closes the dialog first.
 
 ### Previews
 

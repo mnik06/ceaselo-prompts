@@ -1,6 +1,6 @@
 {
-  "version": "v0.71.0",
-  "kitVersion": "2.5.0",
+  "version": "v0.76.0",
+  "kitVersion": "2.6.0",
   "prompts": [
     {
       "name": "system/echo",
@@ -197,6 +197,23 @@
     {
       "name": "ticket-conflict",
       "file": "ticket/conflict.md",
+      "vars": [
+        "ticketKey",
+        "ticketTitle",
+        "branch",
+        "repoName",
+        "baseBranch",
+        "files",
+        "ownAcs",
+        "others",
+        "repo",
+        "loopRules",
+        "projectInstructions"
+      ]
+    },
+    {
+      "name": "ticket-conflict-merge",
+      "file": "ticket/conflict-merge.md",
       "vars": [
         "ticketKey",
         "ticketTitle",

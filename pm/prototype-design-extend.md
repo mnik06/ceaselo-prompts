@@ -20,7 +20,7 @@ Design brief (keep it):
 App shell (`shell.html`; screens go into its data-slot="screens"):
 {{shell}}
 
-Sample data (`data.js`, `window.APP_DATA`, loaded before any screen script runs):
+Sample data (`data.js`, `window.APP_DATA`, loaded before any screen script runs; code stores the prototype with your `data.js`: add what the screens you edit need, and keep every value the other screens read):
 {{data}}
 
 Screen outline (every route that exists; `plan.json` holds the full entries and `screens/<route>.html` the markup, both in your workspace):

@@ -20,7 +20,7 @@ Design brief:
 App shell (`shell.html`; screens go into its data-slot="screens"):
 {{shell}}
 
-Sample data (`data.js`, `window.APP_DATA`, loaded before any screen script runs):
+Sample data (`data.js`, `window.APP_DATA`, loaded before any screen script runs; read-only here: code stores the prototype with this data as it is, so a value a screen needs that it lacks goes in that screen's own markup):
 {{data}}
 
 Screen plan (every route that exists):

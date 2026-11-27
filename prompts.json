@@ -1,5 +1,5 @@
 {
-  "version": "v0.76.0",
+  "version": "v0.77.0",
   "kitVersion": "2.6.0",
   "prompts": [
     {
@@ -109,7 +109,8 @@
         "prototype",
         "projectInstructions",
         "surface",
-        "scopeRule"
+        "scopeRule",
+        "criteriaChanges"
       ]
     },
     {
@@ -128,7 +129,8 @@
         "repos",
         "projectInstructions",
         "scopeRule",
-        "unaskedSeverity"
+        "unaskedSeverity",
+        "criteriaChanges"
       ]
     },
     {
@@ -144,7 +146,8 @@
         "repos",
         "projectInstructions",
         "scopeRule",
-        "unaskedSeverity"
+        "unaskedSeverity",
+        "criteriaChanges"
       ]
     },
     {
@@ -276,6 +279,18 @@
         "reason",
         "acs",
         "tickets"
+      ]
+    },
+    {
+      "name": "pm/description-check",
+      "file": "pm/description-check.md",
+      "vars": [
+        "ticketKey",
+        "ticketTitle",
+        "changes",
+        "criteria",
+        "description",
+        "rejected"
       ]
     },
     {

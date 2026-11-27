@@ -1,4 +1,4 @@
-Fold a confirmed change to "{{projectName}}" into the existing tickets below: rewrite each one's description and acceptance criteria so the ticket, read alone, describes the product after the change. No new ticket is created. The Architect, the builders and the verifier will work from these tickets alone.
+Fold a confirmed change to "{{projectName}}" into the existing tickets below: amend each one's acceptance criteria and rewrite only the parts of its description that contradict them, so the ticket, read alone, describes the product after the change. No new ticket is created. The Architect, the builders and the verifier will work from these tickets alone.
 
 ## The product's surfaces
 
@@ -43,10 +43,11 @@ Read the requirements, decisions and screens this change touches in full with kb
 - A dev ticket keeps the eight description headings. A HITL ticket keeps its own shape: what the person provides and how.
 - Each criterion of your answer is either an existing one, by its number `n` (its text unchanged, or reworded when the change alters it: a reworded criterion is checked again), or a new one without `n`. A criterion you leave out is deleted: drop only what the change removes. Order them as they should read.
 - A dev ticket keeps at least one criterion and at most 40; a change that moves work from one ticket to another removes it from the first and adds it to the second.
-- Give `description` only for a ticket whose description changes; omit it to keep the description as it is.
+- A dev ticket: give `rewrites` for every part of its description that contradicts its amended criteria: a part stating work a removed criterion asked for, the opposite of a reworded criterion, or an Out of scope line naming what an added criterion now asks for. Each is {"from": the exact current wording, copied character for character, inside one section and never a heading, "to": the new wording, never empty: a part is reworded, never deleted}; quote enough for "from" to occur once in the description. `[]` means nothing contradicts. Every other part stays word for word and is never quoted. Never give a dev ticket's `description`.
+- A HITL task: give `description`, the full new description, only when it changes; omit it to keep the description as it is. Never give it `rewrites`.
 - Each ticket stays on its surface (named with it above) and in that surface's terms: a ticket on a surface with no web or PWA target never gains a mention of a browser, a tab, an address or URL, a page reload, developer tools or the Tab key.
 
-Answer with one JSON object `{"tickets":[{"key":"<ticket key>","description":"<the full new description, only when it changes>","ac":[{"n":1,"text":"..."},{"text":"a new criterion"}]}],"revisions":[],"calls":[]}` holding every ticket above exactly once and nothing else. It must be valid JSON: escape every double quote inside a string as \" and every newline as \n.{{rejected}}
+Answer with one JSON object `{"tickets":[{"key":"<dev ticket key>","rewrites":[{"from":"<exact current wording>","to":"<new wording>"}],"ac":[{"n":1,"text":"..."},{"text":"a new criterion"}]},{"key":"<HITL task key>","description":"<the full new description, only when it changes>","ac":[]}],"revisions":[],"calls":[]}` holding every ticket above exactly once and nothing else. It must be valid JSON: escape every double quote inside a string as \" and every newline as \n.{{rejected}}
 
 ## Progress
 

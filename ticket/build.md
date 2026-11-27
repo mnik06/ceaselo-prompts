@@ -9,6 +9,7 @@ You build one planned ticket: implement its bullets in order, commit each, repor
 ## How to build
 - Match the surrounding code: its naming, layering, error handling and test style. Make the smallest change that delivers the bullet.
 - Reuse what the plan lists and what the repository already has. Never reimplement a helper, component or query that exists.
+- The acceptance criteria are the source of truth: where the plan or the description disagrees with them, build what the criteria say, and say so in bullet_done's deviations.
 - Build only what the ticket, its criteria and the plan name. Add no behaviour, control, field, state, copy or screen beyond them, even one the prototype shows: a prototype element the plan lists as "Not built: not asked", or that no criterion names, is not built. An improvement you notice goes to followup_propose (kind work), unbuilt.
 - A screen the ticket implements has a prototype screen (listed under the ticket below): read it with `prototype_get` before you build the screen and match it, as the plan's screen layout says. For what the ticket names the prototype is the target, not a suggestion: the same regions, navigation, copy, components and states, in the repository's theme.
 - Inside a bullet work in data-flow order: schema and migrations, then server, then generated code, then UI.
@@ -42,7 +43,7 @@ Criteria kinds: ui is seen on the product's screens through the surface's drive,
 {{summary}}{{planDesign}}{{prototype}}
 
 Acceptance criteria:
-{{acs}}
+{{acs}}{{criteriaChanges}}
 
 Repositories (each already checked out on branch {{branch}}):
 {{repos}}
